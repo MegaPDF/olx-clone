@@ -20,7 +20,7 @@ export interface Coordinates {
 }
 
 // Location interface (used across multiple models)
-export interface Location {
+export interface GeoLocation {
   address: string;
   city: string;
   state: string;

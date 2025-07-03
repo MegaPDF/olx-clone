@@ -1,4 +1,4 @@
-import { Coordinates, ListingCondition, ListingStatus, LocalizedContent, Price } from "./global";
+import { Coordinates, GeoLocation, ListingCondition, ListingStatus, LocalizedContent, Price } from "./global";
 
 // Listing types
 export interface CreateListing {
@@ -8,7 +8,7 @@ export interface CreateListing {
   category: string;
   condition: ListingCondition;
   images: string[];
-  location: Location;
+  location: GeoLocation;
   seo?: {
     metaTitle?: string;
     metaDescription?: string;
@@ -44,7 +44,7 @@ export interface ListingDetail {
       state: string;
     };
   };
-  location: Location;
+  location: GeoLocation;
   status: ListingStatus;
   features: {
     promoted: {

@@ -14,6 +14,18 @@ export const locationSchema = z.object({
   })
 });
 
+// User preferences schema for signup
+export const signupPreferencesSchema = z.object({
+  language: z.enum(SUPPORTED_LOCALES as [string, ...string[]]).optional(),
+  currency: z.enum(SUPPORTED_CURRENCIES as [string, ...string[]]).optional(),
+  notifications: z.object({
+    email: z.boolean().optional(),
+    push: z.boolean().optional(),
+    sms: z.boolean().optional()
+  }).optional(),
+  theme: z.enum(['light', 'dark', 'system']).optional()
+}).optional();
+
 // Sign in validation
 export const signInSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -35,7 +47,11 @@ export const signUpSchema = z.object({
       'Password must contain at least one uppercase letter, one lowercase letter, and one number'
     ),
   confirmPassword: z.string(),
+  phone: z.string()
+    .regex(/^\+?[\d\s-()]{8,}$/, 'Invalid phone number format')
+    .optional(),
   location: locationSchema,
+  preferences: signupPreferencesSchema,
   acceptTerms: z.boolean().refine(val => val === true, {
     message: 'You must accept the terms and conditions'
   }),

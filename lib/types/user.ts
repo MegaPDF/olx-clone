@@ -1,4 +1,4 @@
-import { Currency, ListingStatus, Locale, Price, SubscriptionStatus, Theme, UserRole, UserStatus } from "./global";
+import { Currency, GeoLocation, ListingStatus, Locale, Price, SubscriptionStatus, Theme, UserRole, UserStatus } from "./global";
 
 // User types
 export interface UserProfile {
@@ -7,7 +7,7 @@ export interface UserProfile {
   email: string;
   avatar?: string;
   phone?: string;
-  location: Location;
+  location: GeoLocation;
   preferences: {
     language: Locale;
     currency: Currency;
@@ -53,7 +53,7 @@ export interface UserProfile {
 export interface UpdateUserProfile {
   name?: string;
   phone?: string;
-  location?: Partial<Location>;
+  location?: Partial<GeoLocation>;
   preferences?: {
     language?: Locale;
     currency?: Currency;

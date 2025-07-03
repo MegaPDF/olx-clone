@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { connectDB } from '@/lib/db';
 import { User } from '@/models';
+import type { IUser } from '@/models/User';
 import { generateRandomString } from '@/lib/utils';
-import type { ApiResponse, UserProfile } from '@/lib/types';
+import type { ApiResponse, Currency, Locale, UserProfile } from '@/lib/types';
 
 // GET /api/auth/session - Get current session info
 export async function GET(request: NextRequest) {
@@ -22,10 +23,10 @@ export async function GET(request: NextRequest) {
 
     await connectDB();
 
-    // Get fresh user data from database
+    // Get fresh user data from database with proper typing
     const user = await User.findById(session.user.id)
       .select('-password')
-      .lean();
+      .lean() as Omit<IUser, 'password'> | null;
 
     if (!user) {
       return NextResponse.json({
@@ -44,8 +45,20 @@ export async function GET(request: NextRequest) {
       avatar: user.avatar,
       phone: user.phone,
       location: user.location,
-      preferences: user.preferences,
-      verification: user.verification,
+      preferences: {
+        ...user.preferences,
+        language: user.preferences.language as Locale,
+        currency: user.preferences.currency as Currency
+      },
+      verification: {
+        email: {
+          verified: user.verification.email.verified
+          // Don't return sensitive verification data
+        },
+        phone: {
+          verified: user.verification.phone.verified
+        }
+      },
       stats: user.stats,
       subscription: user.subscription,
       role: user.role,

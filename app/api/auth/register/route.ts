@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
         validatedData.email,
         validatedData.name,
         verificationToken,
-        validatedData.preferences?.language || 'en'
+        (validatedData.preferences?.language === 'id' ? 'id' : 'en')
       );
     } catch (emailError) {
       console.error('Failed to send verification email:', emailError);

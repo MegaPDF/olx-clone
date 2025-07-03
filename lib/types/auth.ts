@@ -1,4 +1,4 @@
-import { Coordinates, Currency, Locale, Theme, UserRole, UserStatus } from "./global";
+import { Coordinates, Currency, GeoLocation, Locale, Theme, UserRole, UserStatus } from "./global";
 
 // Auth types
 export interface SignInCredentials {
@@ -55,7 +55,7 @@ export interface AuthSession {
     role: UserRole;
     status: UserStatus;
     emailVerified: boolean;
-    location: Location;
+    location: GeoLocation;
     preferences: {
       language: Locale;
       currency: Currency;

@@ -1,0 +1,1 @@
+// Listings management table

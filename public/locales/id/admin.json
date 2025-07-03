@@ -1,0 +1,409 @@
+
+{
+  "navigation": {
+    "dashboard": "Dasbor",
+    "users": "Pengguna",
+    "listings": "Daftar",
+    "categories": "Kategori",
+    "reports": "Laporan",
+    "analytics": "Analitik",
+    "payments": "Pembayaran",
+    "settings": "Pengaturan"
+  },
+  "dashboard": {
+    "title": "Dasbor Admin",
+    "overview": "Ikhtisar",
+    "stats": {
+      "total_users": "Total Pengguna",
+      "active_users": "Pengguna Aktif",
+      "new_users_today": "Pengguna Baru Hari Ini",
+      "total_listings": "Total Daftar",
+      "active_listings": "Daftar Aktif",
+      "sold_listings": "Daftar Terjual",
+      "total_revenue": "Total Pendapatan",
+      "monthly_revenue": "Pendapatan Bulanan",
+      "pending_reports": "Laporan Tertunda",
+      "growth": "Pertumbuhan",
+      "vs_last_month": "vs bulan lalu"
+    },
+    "charts": {
+      "user_growth": "Pertumbuhan Pengguna",
+      "listing_activity": "Aktivitas Daftar",
+      "revenue_trend": "Tren Pendapatan",
+      "category_distribution": "Distribusi Kategori"
+    },
+    "recent_activity": {
+      "title": "Aktivitas Terbaru",
+      "new_user": "Pengguna baru terdaftar",
+      "new_listing": "Daftar baru dibuat",
+      "listing_sold": "Daftar ditandai sebagai terjual",
+      "report_submitted": "Laporan dikirim",
+      "payment_received": "Pembayaran diterima",
+      "view_all": "Lihat Semua Aktivitas"
+    },
+    "quick_actions": {
+      "title": "Aksi Cepat",
+      "create_category": "Buat Kategori",
+      "review_reports": "Tinjau Laporan",
+      "manage_users": "Kelola Pengguna",
+      "view_analytics": "Lihat Analitik"
+    }
+  },
+  "users": {
+    "title": "Manajemen Pengguna",
+    "total_users": "Total Pengguna",
+    "active_users": "Pengguna Aktif",
+    "new_users": "Pengguna Baru",
+    "suspended_users": "Pengguna Tersuspensi",
+    "search_users": "Cari pengguna...",
+    "filter_by": "Filter berdasarkan",
+    "all_users": "Semua Pengguna",
+    "admins": "Admin",
+    "moderators": "Moderator",
+    "regular_users": "Pengguna Reguler",
+    "table": {
+      "name": "Nama",
+      "email": "Email",
+      "role": "Peran",
+      "status": "Status",
+      "joined": "Bergabung",
+      "last_login": "Login Terakhir",
+      "listings": "Daftar",
+      "actions": "Aksi"
+    },
+    "actions": {
+      "view": "Lihat",
+      "edit": "Edit",
+      "suspend": "Suspensi",
+      "activate": "Aktivasi",
+      "ban": "Blokir",
+      "delete": "Hapus",
+      "send_message": "Kirim Pesan",
+      "view_listings": "Lihat Daftar"
+    },
+    "status": {
+      "active": "Aktif",
+      "suspended": "Tersuspensi",
+      "banned": "Diblokir"
+    },
+    "roles": {
+      "user": "Pengguna",
+      "admin": "Admin",
+      "moderator": "Moderator"
+    },
+    "bulk_actions": {
+      "select_all": "Pilih Semua",
+      "suspend_selected": "Suspensi Terpilih",
+      "activate_selected": "Aktivasi Terpilih",
+      "delete_selected": "Hapus Terpilih"
+    },
+    "user_details": {
+      "title": "Detail Pengguna",
+      "basic_info": "Informasi Dasar",
+      "contact_info": "Informasi Kontak",
+      "account_info": "Informasi Akun",
+      "statistics": "Statistik",
+      "recent_listings": "Daftar Terbaru",
+      "activity_log": "Log Aktivitas"
+    }
+  },
+  "listings": {
+    "title": "Manajemen Daftar",
+    "total_listings": "Total Daftar",
+    "active_listings": "Daftar Aktif",
+    "pending_review": "Menunggu Tinjauan",
+    "reported_listings": "Daftar Dilaporkan",
+    "search_listings": "Cari daftar...",
+    "filter_by": "Filter berdasarkan",
+    "all_listings": "Semua Daftar",
+    "by_status": "Berdasarkan Status",
+    "by_category": "Berdasarkan Kategori",
+    "table": {
+      "title": "Judul",
+      "seller": "Penjual",
+      "category": "Kategori",
+      "price": "Harga",
+      "status": "Status",
+      "created": "Dibuat",
+      "views": "Tampilan",
+      "actions": "Aksi"
+    },
+    "actions": {
+      "view": "Lihat",
+      "edit": "Edit",
+      "approve": "Setujui",
+      "reject": "Tolak",
+      "suspend": "Suspensi",
+      "feature": "Fitur",
+      "delete": "Hapus"
+    },
+    "status": {
+      "active": "Aktif",
+      "draft": "Draf",
+      "pending": "Tertunda",
+      "suspended": "Tersuspensi",
+      "sold": "Terjual",
+      "expired": "Kedaluwarsa"
+    },
+    "bulk_actions": {
+      "approve_selected": "Setujui Terpilih",
+      "reject_selected": "Tolak Terpilih",
+      "suspend_selected": "Suspensi Terpilih",
+      "delete_selected": "Hapus Terpilih"
+    }
+  },
+  "categories": {
+    "title": "Manajemen Kategori",
+    "create_category": "Buat Kategori",
+    "edit_category": "Edit Kategori",
+    "total_categories": "Total Kategori",
+    "active_categories": "Kategori Aktif",
+    "form": {
+      "name_en": "Nama (Inggris)",
+      "name_id": "Nama (Indonesia)",
+      "slug": "Slug",
+      "description_en": "Deskripsi (Inggris)",
+      "description_id": "Deskripsi (Indonesia)",
+      "parent": "Kategori Induk",
+      "icon": "Ikon",
+      "image": "Gambar",
+      "sort_order": "Urutan",
+      "active": "Aktif",
+      "seo": "Pengaturan SEO",
+      "meta_title_en": "Judul Meta (Inggris)",
+      "meta_title_id": "Judul Meta (Indonesia)",
+      "meta_description_en": "Deskripsi Meta (Inggris)",
+      "meta_description_id": "Deskripsi Meta (Indonesia)",
+      "keywords": "Kata Kunci"
+    },
+    "table": {
+      "name": "Nama",
+      "slug": "Slug",
+      "parent": "Induk",
+      "listings": "Daftar",
+      "status": "Status",
+      "sort_order": "Urutan",
+      "actions": "Aksi"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Hapus",
+      "activate": "Aktivasi",
+      "deactivate": "Nonaktifkan",
+      "view_listings": "Lihat Daftar"
+    }
+  },
+  "reports": {
+    "title": "Manajemen Laporan",
+    "pending_reports": "Laporan Tertunda",
+    "resolved_reports": "Laporan Terselesaikan",
+    "filter_by": "Filter berdasarkan",
+    "all_reports": "Semua Laporan",
+    "by_type": "Berdasarkan Tipe",
+    "by_status": "Berdasarkan Status",
+    "by_priority": "Berdasarkan Prioritas",
+    "table": {
+      "type": "Tipe",
+      "target": "Target",
+      "reporter": "Pelapor",
+      "reason": "Alasan",
+      "status": "Status",
+      "priority": "Prioritas",
+      "created": "Dibuat",
+      "actions": "Aksi"
+    },
+    "types": {
+      "listing": "Daftar",
+      "user": "Pengguna",
+      "message": "Pesan"
+    },
+    "status": {
+      "pending": "Tertunda",
+      "investigating": "Sedang Diselidiki",
+      "resolved": "Terselesaikan",
+      "dismissed": "Ditolak"
+    },
+    "priority": {
+      "low": "Rendah",
+      "medium": "Sedang",
+      "high": "Tinggi",
+      "urgent": "Mendesak"
+    },
+    "actions": {
+      "view": "Lihat",
+      "investigate": "Selidiki",
+      "resolve": "Selesaikan",
+      "dismiss": "Tolak",
+      "escalate": "Eskalasi"
+    },
+    "resolve": {
+      "title": "Selesaikan Laporan",
+      "action": "Tindakan yang Diambil",
+      "no_action": "Tidak Ada Tindakan Diperlukan",
+      "warning": "Peringatan Dikirim",
+      "content_removed": "Konten Dihapus",
+      "user_suspended": "Pengguna Tersuspensi",
+      "user_banned": "Pengguna Diblokir",
+      "notes": "Catatan Penyelesaian",
+      "resolve": "Selesaikan Laporan"
+    }
+  },
+  "analytics": {
+    "title": "Analitik",
+    "overview": "Ikhtisar",
+    "users": "Analitik Pengguna",
+    "listings": "Analitik Daftar",
+    "revenue": "Analitik Pendapatan",
+    "categories": "Analitik Kategori",
+    "date_range": "Rentang Tanggal",
+    "last_7_days": "7 Hari Terakhir",
+    "last_30_days": "30 Hari Terakhir",
+    "last_90_days": "90 Hari Terakhir",
+    "custom_range": "Rentang Kustom",
+    "metrics": {
+      "page_views": "Tampilan Halaman",
+      "unique_visitors": "Pengunjung Unik",
+      "conversion_rate": "Tingkat Konversi",
+      "bounce_rate": "Tingkat Pentalan",
+      "avg_session": "Durasi Sesi Rata-rata",
+      "top_categories": "Kategori Teratas",
+      "top_locations": "Lokasi Teratas",
+      "user_growth": "Pertumbuhan Pengguna",
+      "listing_growth": "Pertumbuhan Daftar"
+    }
+  },
+  "payments": {
+    "title": "Manajemen Pembayaran",
+    "total_revenue": "Total Pendapatan",
+    "monthly_revenue": "Pendapatan Bulanan",
+    "pending_payments": "Pembayaran Tertunda",
+    "failed_payments": "Pembayaran Gagal",
+    "search_payments": "Cari pembayaran...",
+    "filter_by": "Filter berdasarkan",
+    "all_payments": "Semua Pembayaran",
+    "by_status": "Berdasarkan Status",
+    "by_type": "Berdasarkan Tipe",
+    "table": {
+      "transaction_id": "ID Transaksi",
+      "user": "Pengguna",
+      "type": "Tipe",
+      "amount": "Jumlah",
+      "status": "Status",
+      "date": "Tanggal",
+      "actions": "Aksi"
+    },
+    "types": {
+      "promotion": "Promosi",
+      "subscription": "Langganan",
+      "featured_listing": "Daftar Unggulan"
+    },
+    "status": {
+      "pending": "Tertunda",
+      "completed": "Selesai",
+      "failed": "Gagal",
+      "refunded": "Dikembalikan",
+      "cancelled": "Dibatalkan"
+    },
+    "actions": {
+      "view": "Lihat",
+      "refund": "Pengembalian Dana",
+      "retry": "Coba Lagi",
+      "download_invoice": "Unduh Faktur"
+    }
+  },
+  "settings": {
+    "title": "Pengaturan Sistem",
+    "general": "Pengaturan Umum",
+    "aws": "Konfigurasi AWS",
+    "stripe": "Konfigurasi Stripe",
+    "oauth": "Pengaturan OAuth",
+    "email": "Pengaturan Email",
+    "pricing": "Pengaturan Harga",
+    "features": "Pengaturan Fitur",
+    "general_form": {
+      "site_name": "Nama Situs",
+      "site_description": "Deskripsi Situs",
+      "site_url": "URL Situs",
+      "contact_email": "Email Kontak",
+      "support_email": "Email Dukungan",
+      "maintenance_mode": "Mode Pemeliharaan",
+      "registration_enabled": "Pendaftaran Diaktifkan"
+    },
+    "aws_form": {
+      "access_key": "ID Kunci Akses",
+      "secret_key": "Kunci Akses Rahasia",
+      "region": "Wilayah",
+      "bucket_name": "Nama Bucket S3",
+      "cloudfront_url": "URL CloudFront"
+    },
+    "stripe_form": {
+      "public_key": "Kunci Publik",
+      "secret_key": "Kunci Rahasia",
+      "webhook_secret": "Rahasia Webhook",
+      "currency": "Mata Uang Default"
+    },
+    "oauth_form": {
+      "google_enabled": "OAuth Google Diaktifkan",
+      "google_client_id": "ID Klien Google",
+      "google_secret": "Rahasia Klien Google",
+      "facebook_enabled": "OAuth Facebook Diaktifkan",
+      "facebook_app_id": "ID Aplikasi Facebook",
+      "facebook_secret": "Rahasia Aplikasi Facebook"
+    },
+    "email_form": {
+      "provider": "Penyedia Email",
+      "from_email": "Dari Email",
+      "from_name": "Dari Nama",
+      "smtp_host": "Host SMTP",
+      "smtp_port": "Port SMTP",
+      "smtp_user": "Nama Pengguna SMTP",
+      "smtp_password": "Kata Sandi SMTP",
+      "sendgrid_key": "Kunci API SendGrid"
+    },
+    "pricing_form": {
+      "featured_price": "Harga Daftar Unggulan",
+      "urgent_price": "Harga Daftar Mendesak",
+      "highlight_price": "Harga Daftar Sorotan",
+      "basic_monthly": "Paket Dasar Bulanan",
+      "basic_yearly": "Paket Dasar Tahunan",
+      "premium_monthly": "Paket Premium Bulanan",
+      "premium_yearly": "Paket Premium Tahunan"
+    },
+    "features_form": {
+      "chat_enabled": "Fitur Obrolan",
+      "favorites_enabled": "Fitur Favorit",
+      "reports_enabled": "Fitur Laporan",
+      "promotions_enabled": "Fitur Promosi",
+      "subscriptions_enabled": "Fitur Langganan",
+      "geolocation_enabled": "Fitur Geolocation"
+    },
+    "save": "Simpan Pengaturan",
+    "saving": "Menyimpan...",
+    "saved": "Pengaturan berhasil disimpan!"
+  },
+  "actions": {
+    "create": "Buat",
+    "edit": "Edit",
+    "delete": "Hapus",
+    "approve": "Setujui",
+    "reject": "Tolak",
+    "suspend": "Suspensi",
+    "activate": "Aktivasi",
+    "ban": "Blokir",
+    "resolve": "Selesaikan",
+    "dismiss": "Tolak",
+    "view": "Lihat",
+    "export": "Ekspor",
+    "import": "Impor",
+    "refresh": "Segarkan"
+  },
+  "confirmation": {
+    "delete_user": "Apakah Anda yakin ingin menghapus pengguna ini?",
+    "suspend_user": "Apakah Anda yakin ingin menangguhkan pengguna ini?",
+    "ban_user": "Apakah Anda yakin ingin memblokir pengguna ini?",
+    "delete_listing": "Apakah Anda yakin ingin menghapus daftar ini?",
+    "delete_category": "Apakah Anda yakin ingin menghapus kategori ini?",
+    "resolve_report": "Apakah Anda yakin ingin menyelesaikan laporan ini?",
+    "cannot_be_undone": "Tindakan ini tidak dapat dibatalkan."
+  }
+}

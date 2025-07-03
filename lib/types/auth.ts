@@ -10,6 +10,7 @@ export interface SignInCredentials {
 export interface SignUpCredentials {
   name: string;
   email: string;
+  phone?: string;
   password: string;
   confirmPassword: string;
   location: {
@@ -18,6 +19,16 @@ export interface SignUpCredentials {
     state: string;
     country: string;
     coordinates: Coordinates;
+  };
+ preferences: {
+    language: string;
+    currency: string;
+    notifications: {
+      email: boolean;
+      push: boolean;
+      sms: boolean;
+    };
+    theme: string;
   };
   acceptTerms: boolean;
   newsletter?: boolean;

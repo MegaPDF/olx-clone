@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslation } from "next-i18next";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
 interface LocalizedLinkProps
   extends Omit<React.ComponentProps<typeof Link>, "href"> {
@@ -32,7 +32,7 @@ export const LocalizedLink = forwardRef<HTMLAnchorElement, LocalizedLinkProps>(
     },
     ref
   ) => {
-    const { i18n } = useTranslation();
+    const { i18n } = useTranslations();
     const router = useRouter();
 
     // Use provided locale or current locale

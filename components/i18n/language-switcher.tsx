@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -51,7 +51,7 @@ export function LanguageSwitcher({
   className,
 }: LanguageSwitcherProps) {
   const router = useRouter();
-  const { i18n, t } = useTranslation("common");
+  const { i18n, t } = useTranslations("common");
 
   const currentLanguage =
     languages.find((lang) => lang.code === i18n.language) || languages[0];

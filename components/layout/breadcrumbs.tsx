@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { ChevronRight, Home, MoreHorizontal, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,7 +35,8 @@ export function Breadcrumbs({
   size = "md",
   className,
 }: BreadcrumbsProps) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   // Filter out empty items
   const validItems = items.filter((item) => item.title);
@@ -206,7 +207,8 @@ export function Breadcrumbs({
 
 // Hook to generate breadcrumbs from router pathname
 export function useBreadcrumbs() {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   const generateBreadcrumbs = (pathname: string): Breadcrumb[] => {
     // Remove locale prefix and split path

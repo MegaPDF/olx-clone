@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/types";
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 interface LocalizedLinkProps
   extends Omit<React.ComponentProps<typeof Link>, "href"> {
@@ -32,21 +32,17 @@ export const LocalizedLink = forwardRef<HTMLAnchorElement, LocalizedLinkProps>(
     },
     ref
   ) => {
-    const { i18n } = useTranslations();
-    const router = useRouter();
+    const currentLocale = useLocale();
+    const pathname = usePathname();
 
     // Use provided locale or current locale
-    const targetLocale = locale || (i18n.language as Locale);
+    const targetLocale: Locale = locale || (currentLocale as Locale);
 
     // Create localized href
     const localizedHref = createLocalizedHref(href, targetLocale);
 
     // Check if link is active
-    const isActive = checkIfActive(
-      window.location.pathname,
-      localizedHref,
-      exactMatch
-    );
+    const isActive = checkIfActive(pathname, localizedHref, exactMatch);
 
     // Handle disabled state
     if (disabled) {
@@ -119,61 +115,4 @@ function checkIfActive(
   }
 
   return cleanCurrentPath.startsWith(cleanLinkHref);
-}
-
-// Hook for programmatic navigation with locale support
-export function useLocalizedRouter() {
-  const router = useRouter();
-  const { i18n } = useTranslation();
-
-  const push = (href: string, locale?: Locale) => {
-    const targetLocale = locale || (i18n.language as Locale);
-    const localizedHref = createLocalizedHref(href, targetLocale);
-    return router.push(localizedHref);
-  };
-
-  const replace = (href: string, locale?: Locale) => {
-    const targetLocale = locale || (i18n.language as Locale);
-    const localizedHref = createLocalizedHref(href, targetLocale);
-    return router.replace(localizedHref);
-  };
-
-  const prefetch = (href: string, locale?: Locale) => {
-    const targetLocale = locale || (i18n.language as Locale);
-    const localizedHref = createLocalizedHref(href, targetLocale);
-    return router.prefetch(localizedHref);
-  };
-
-  return {
-    ...router,
-    push,
-    replace,
-    prefetch,
-  };
-}
-
-// Utility function to get localized URL
-export function getLocalizedUrl(href: string, locale?: Locale): string {
-  const targetLocale = locale || "en"; // Default to English if no locale provided
-  return createLocalizedHref(href, targetLocale);
-}
-
-// Higher-order component for adding localization to any link component
-export function withLocalization<P extends { href: string }>(
-  Component: React.ComponentType<P>
-) {
-  type LocalizedProps = Omit<P, "href" | "locale"> & { href: string; locale?: Locale };
-  
-  return forwardRef<HTMLAnchorElement, LocalizedProps>(
-    (props, ref) => {
-      const { locale, href, ...rest } = props as LocalizedProps;
-      const { i18n } = useTranslation();
-
-      const targetLocale = locale || (i18n.language as Locale);
-      const localizedHref = createLocalizedHref(href, targetLocale);
-
-      // Only pass ref if Component is a DOM element or supports ref
-      return <Component {...(rest as P)} href={localizedHref} {...(ref ? { ref } : {})} />;
-    }
-  );
 }

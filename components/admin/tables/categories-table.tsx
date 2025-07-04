@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import {
   Table,
@@ -75,7 +75,8 @@ export function CategoriesTable({
   onCreateNew,
   className,
 }: CategoriesTableProps) {
-  const { t } = useTranslation(["admin", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortField, setSortField] = useState<SortField>("sortOrder");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");

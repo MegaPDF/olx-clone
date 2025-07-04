@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -168,7 +168,8 @@ export function SocialShare({
   className,
   children,
 }: SocialShareProps) {
-  const { t } = useTranslation("common");
+  const t = useTranslations();
+  const locale = useLocale();
   const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -269,18 +270,20 @@ export function SocialShare({
             </>
           )}
 
-          {showNativeShare && typeof navigator !== "undefined" && typeof navigator.share === "function" && (
-            <>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
-                onClick={handleNativeShare}
-                className="flex items-center gap-2"
-              >
-                <Share2 className="h-4 w-4" />
-                {t("share_native")}
-              </DropdownMenuItem>
-            </>
-          )}
+          {showNativeShare &&
+            typeof navigator !== "undefined" &&
+            typeof navigator.share === "function" && (
+              <>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  onClick={handleNativeShare}
+                  className="flex items-center gap-2"
+                >
+                  <Share2 className="h-4 w-4" />
+                  {t("share_native")}
+                </DropdownMenuItem>
+              </>
+            )}
         </DropdownMenuContent>
       </DropdownMenu>
     );
@@ -350,16 +353,18 @@ export function SocialShare({
             </div>
 
             {/* Native Share */}
-            {showNativeShare && typeof navigator !== "undefined" && typeof navigator.share === "function" && (
-              <Button
-                variant="outline"
-                onClick={handleNativeShare}
-                className="w-full gap-2"
-              >
-                <Share2 className="h-4 w-4" />
-                {t("share_native")}
-              </Button>
-            )}
+            {showNativeShare &&
+              typeof navigator !== "undefined" &&
+              typeof navigator.share === "function" && (
+                <Button
+                  variant="outline"
+                  onClick={handleNativeShare}
+                  className="w-full gap-2"
+                >
+                  <Share2 className="h-4 w-4" />
+                  {t("share_native")}
+                </Button>
+              )}
           </div>
         </DialogContent>
       </Dialog>

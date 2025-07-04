@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { useState } from "react";
 import {
   Table,
@@ -97,7 +97,8 @@ export function ListingsTable({
   onPromote,
   className,
 }: ListingsTableProps) {
-  const { t, i18n } = useTranslation(["admin", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [selectedListings, setSelectedListings] = useState<string[]>([]);
   const [sortField, setSortField] = useState<SortField>("createdAt");
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
@@ -120,7 +121,7 @@ export function ListingsTable({
   };
 
   const formatTimeAgo = (date: Date) => {
-    const locale = i18n.language === "id" ? idLocale : enUS;
+    const locale = locale === "id" ? idLocale : enUS;
     return formatDistanceToNow(date, { addSuffix: true, locale });
   };
 

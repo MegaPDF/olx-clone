@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -61,7 +61,8 @@ export function ListingSearch({
   loading = false,
   className,
 }: ListingSearchProps) {
-  const { t } = useTranslation(["listings", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [focused, setFocused] = useState(false);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);

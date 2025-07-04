@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -76,7 +76,8 @@ export function ConditionFilter({
   showCounts = false,
   className,
 }: ConditionFilterProps) {
-  const { t } = useTranslation(["listings", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   const conditions: ListingCondition[] = [
     "new",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -39,7 +39,8 @@ interface SignInFormProps {
 }
 
 export function SignInForm({ className, redirectTo }: SignInFormProps) {
-  const { t } = useTranslation(["auth", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);

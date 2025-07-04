@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -56,7 +56,8 @@ export function ListingGrid({
   emptyStateDescription,
   className,
 }: ListingGridProps) {
-  const { t } = useTranslation(["listings", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [currentVariant, setCurrentVariant] = useState(variant);
 
   // Loading skeleton

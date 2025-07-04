@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -73,7 +73,8 @@ export function DeleteConfirmation({
   consequences = [],
   relatedItems = [],
 }: DeleteConfirmationProps) {
-  const { t } = useTranslation(["admin", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [confirmationInput, setConfirmationInput] = useState("");
   const [acknowledgeConsequences, setAcknowledgeConsequences] = useState(false);
 
@@ -293,7 +294,9 @@ export function DeleteConfirmation({
               <Checkbox
                 id="acknowledge"
                 checked={acknowledgeConsequences}
-                onCheckedChange={(checked) => setAcknowledgeConsequences(checked === true)}
+                onCheckedChange={(checked) =>
+                  setAcknowledgeConsequences(checked === true)
+                }
                 disabled={isSubmitting}
                 className="mt-0.5"
               />

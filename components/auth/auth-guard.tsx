@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/hooks/use-auth";
 import { Loader2 } from "lucide-react";
@@ -27,7 +27,8 @@ export function AuthGuard({
   fallbackPath,
   loadingComponent,
 }: AuthGuardProps) {
-  const { t } = useTranslation(["auth", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const router = useRouter();
   const {
     user,

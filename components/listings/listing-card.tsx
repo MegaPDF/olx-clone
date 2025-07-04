@@ -1,7 +1,7 @@
 "use client";
 
 import { JSX, useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -50,13 +50,14 @@ export function ListingCard({
   showSeller = true,
   className,
 }: ListingCardProps) {
-  const { t, i18n } = useTranslation(["listings", "common"]);
+  const t = useTranslations();
+  const locale = useLocale();
   const { user } = useAuth();
   const [imageError, setImageError] = useState(false);
   const [favoriteLoading, setFavoriteLoading] = useState(false);
 
   const formatPrice = (price: typeof listing.price) => {
-    const formatter = new Intl.NumberFormat(i18n.language, {
+    const formatter = new Intl.NumberFormat(locale, {
       style: "currency",
       currency: price.currency,
       minimumFractionDigits: 0,
@@ -65,8 +66,8 @@ export function ListingCard({
   };
 
   const formatTimeAgo = (date: Date) => {
-    const locale = i18n.language === "id" ? idLocale : enUS;
-    return formatDistanceToNow(new Date(date), { addSuffix: true, locale });
+    const dateFnsLocale = locale === "id" ? idLocale : enUS;
+    return formatDistanceToNow(new Date(date), { addSuffix: true, locale: dateFnsLocale });
   };
 
   const handleFavorite = async (e: React.MouseEvent) => {

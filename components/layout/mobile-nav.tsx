@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Sheet,
   SheetContent,
@@ -47,7 +47,8 @@ export function MobileNav({
   onClose,
   className,
 }: MobileNavProps) {
-  const { t } = useTranslation(["common", "navigation"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const router = useLocalizedRouter();
   const { user, isAuthenticated } = useAuth();
   const [currentLevel, setCurrentLevel] = useState<NavItem[]>(navigation);
@@ -126,7 +127,10 @@ export function MobileNav({
         {/* User Info */}
         <div className="flex items-center space-x-3 mb-4">
           <Avatar className="h-12 w-12">
-            <AvatarImage src={user?.image || undefined} alt={user?.name || ""} />
+            <AvatarImage
+              src={user?.image || undefined}
+              alt={user?.name || ""}
+            />
             <AvatarFallback>
               {user?.name?.charAt(0).toUpperCase()}
             </AvatarFallback>

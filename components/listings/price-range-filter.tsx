@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -72,7 +72,8 @@ export function PriceRangeFilter({
   step = 10,
   className,
 }: PriceRangeFilterProps) {
-  const { t, i18n } = useTranslation(["listings", "common"]);
+  const t = useTranslations();
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [minInput, setMinInput] = useState("");
   const [maxInput, setMaxInput] = useState("");
@@ -129,7 +130,7 @@ export function PriceRangeFilter({
   }, [currency]);
 
   const formatPrice = (amount: number) => {
-    return new Intl.NumberFormat(i18n.language, {
+    return new Intl.NumberFormat(locale, {
       style: "currency",
       currency,
       minimumFractionDigits: 0,

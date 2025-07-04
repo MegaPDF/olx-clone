@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -47,7 +47,8 @@ export function CategorySelector({
   variant = "default",
   className,
 }: CategorySelectorProps) {
-  const { t, i18n } = useTranslation(["listings", "common"]);
+  const t = useTranslations();
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [categories, setCategories] = useState<CategoryTree[]>([]);
   const [loading, setLoading] = useState(true);
@@ -106,8 +107,7 @@ export function CategorySelector({
 
   const getCategoryName = (category: CategoryTree) => {
     return (
-      category.name[i18n.language as keyof typeof category.name] ||
-      category.name.en
+      category.name[locale as keyof typeof category.name] || category.name.en
     );
   };
 

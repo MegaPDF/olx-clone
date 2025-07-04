@@ -1,28 +1,28 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
   DialogTitle,
-  DialogTrigger 
+  DialogTrigger,
 } from "@/components/ui/dialog";
-import { 
-  Upload, 
-  X, 
-  ZoomIn, 
-  ChevronLeft, 
+import {
+  Upload,
+  X,
+  ZoomIn,
+  ChevronLeft,
   ChevronRight,
   Download,
   Share2,
   MoreVertical,
   Grid3X3,
-  Maximize2
+  Maximize2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDropzone } from "react-dropzone";
@@ -50,23 +50,27 @@ export function ListingImages({
   showThumbnails = true,
   className,
 }: ListingImagesProps) {
-  const { t } = useTranslation(["listings", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fullscreenOpen, setFullscreenOpen] = useState(false);
 
-  const onDrop = useCallback(async (acceptedFiles: File[]) => {
-    if (!onUpload || !editable) return;
-    
-    const remainingSlots = maxImages - images.length;
-    const filesToUpload = acceptedFiles.slice(0, remainingSlots);
-    
-    await onUpload(filesToUpload);
-  }, [onUpload, images.length, maxImages, editable]);
+  const onDrop = useCallback(
+    async (acceptedFiles: File[]) => {
+      if (!onUpload || !editable) return;
+
+      const remainingSlots = maxImages - images.length;
+      const filesToUpload = acceptedFiles.slice(0, remainingSlots);
+
+      await onUpload(filesToUpload);
+    },
+    [onUpload, images.length, maxImages, editable]
+  );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      'image/*': ['.jpg', '.jpeg', '.png', '.webp']
+      "image/*": [".jpg", ".jpeg", ".png", ".webp"],
     },
     maxFiles: maxImages - images.length,
     disabled: !editable || images.length >= maxImages,
@@ -74,10 +78,10 @@ export function ListingImages({
 
   const removeImage = (index: number) => {
     if (!onImagesChange || !editable) return;
-    
+
     const newImages = images.filter((_, i) => i !== index);
     onImagesChange(newImages);
-    
+
     // Adjust current index if necessary
     if (currentIndex >= newImages.length && newImages.length > 0) {
       setCurrentIndex(newImages.length - 1);
@@ -88,7 +92,7 @@ export function ListingImages({
 
   const moveImage = (fromIndex: number, toIndex: number) => {
     if (!onImagesChange || !editable) return;
-    
+
     const newImages = [...images];
     const [movedImage] = newImages.splice(fromIndex, 1);
     newImages.splice(toIndex, 0, movedImage);
@@ -108,15 +112,17 @@ export function ListingImages({
       const response = await fetch(imageUrl);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
+      const a = document.createElement("a");
       a.href = url;
-      a.download = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_image.jpg`;
+      a.download = `${title
+        .replace(/[^a-z0-9]/gi, "_")
+        .toLowerCase()}_image.jpg`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
     } catch (error) {
-      console.error('Failed to download image:', error);
+      console.error("Failed to download image:", error);
     }
   };
 
@@ -128,7 +134,7 @@ export function ListingImages({
           url: imageUrl,
         });
       } catch (error) {
-        console.error('Error sharing:', error);
+        console.error("Error sharing:", error);
       }
     } else {
       // Fallback: copy to clipboard
@@ -144,8 +150,8 @@ export function ListingImages({
           {...getRootProps()}
           className={cn(
             "border-2 border-dashed rounded-lg p-8 text-center transition-colors",
-            isDragActive 
-              ? "border-primary bg-primary/5" 
+            isDragActive
+              ? "border-primary bg-primary/5"
               : "border-muted-foreground/25 hover:border-primary/50"
           )}
         >
@@ -155,11 +161,9 @@ export function ListingImages({
           <p className="text-sm text-muted-foreground mb-4">
             {t("listings:uploadDescription", { max: maxImages })}
           </p>
-          <Button type="button">
-            {t("listings:selectPhotos")}
-          </Button>
+          <Button type="button">{t("listings:selectPhotos")}</Button>
         </div>
-        
+
         {uploadProgress > 0 && (
           <div className="mt-4">
             <div className="flex items-center justify-between mb-2">
@@ -175,7 +179,12 @@ export function ListingImages({
 
   if (images.length === 0) {
     return (
-      <div className={cn("bg-muted rounded-lg aspect-[4/3] flex items-center justify-center", className)}>
+      <div
+        className={cn(
+          "bg-muted rounded-lg aspect-[4/3] flex items-center justify-center",
+          className
+        )}
+      >
         <div className="text-center text-muted-foreground">
           <Grid3X3 className="mx-auto h-12 w-12 mb-2" />
           <p>{t("listings:noImages")}</p>
@@ -194,7 +203,7 @@ export function ListingImages({
             alt={`${title} - ${t("common:image")} ${currentIndex + 1}`}
             className="w-full h-full object-cover"
           />
-          
+
           {/* Image overlay controls */}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors">
             {/* Navigation arrows */}
@@ -234,34 +243,29 @@ export function ListingImages({
                 <DialogContent className="max-w-4xl">
                   <DialogHeader>
                     <DialogTitle>
-                      {title} - {t("common:image")} {currentIndex + 1} {t("common:of")} {images.length}
+                      {title} - {t("common:image")} {currentIndex + 1}{" "}
+                      {t("common:of")} {images.length}
                     </DialogTitle>
                   </DialogHeader>
                   <div className="relative">
                     <img
                       src={images[currentIndex]}
-                      alt={`${title} - ${t("common:image")} ${currentIndex + 1}`}
+                      alt={`${title} - ${t("common:image")} ${
+                        currentIndex + 1
+                      }`}
                       className="w-full max-h-[70vh] object-contain"
                     />
-                    
+
                     {images.length > 1 && (
                       <div className="flex items-center justify-center gap-2 mt-4">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={prevImage}
-                        >
+                        <Button variant="outline" size="sm" onClick={prevImage}>
                           <ChevronLeft className="h-4 w-4 mr-2" />
                           {t("common:previous")}
                         </Button>
                         <span className="text-sm text-muted-foreground">
                           {currentIndex + 1} / {images.length}
                         </span>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={nextImage}
-                        >
+                        <Button variant="outline" size="sm" onClick={nextImage}>
                           {t("common:next")}
                           <ChevronRight className="h-4 w-4 ml-2" />
                         </Button>
@@ -319,8 +323,8 @@ export function ListingImages({
               key={index}
               className={cn(
                 "relative aspect-square rounded overflow-hidden border-2 transition-all",
-                index === currentIndex 
-                  ? "border-primary" 
+                index === currentIndex
+                  ? "border-primary"
                   : "border-transparent hover:border-primary/50"
               )}
               onClick={() => setCurrentIndex(index)}
@@ -330,7 +334,7 @@ export function ListingImages({
                 alt={`${title} - ${t("common:thumbnail")} ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-              
+
               {editable && (
                 <Button
                   variant="secondary"
@@ -346,7 +350,7 @@ export function ListingImages({
               )}
             </button>
           ))}
-          
+
           {/* Add more button */}
           {editable && images.length < maxImages && (
             <div
@@ -377,17 +381,17 @@ export function ListingImages({
           {...getRootProps()}
           className={cn(
             "border-2 border-dashed rounded-lg p-4 text-center transition-colors",
-            isDragActive 
-              ? "border-primary bg-primary/5" 
+            isDragActive
+              ? "border-primary bg-primary/5"
               : "border-muted-foreground/25 hover:border-primary/50"
           )}
         >
           <input {...getInputProps()} />
           <Upload className="mx-auto h-6 w-6 text-muted-foreground mb-2" />
           <p className="text-sm text-muted-foreground">
-            {t("listings:addMorePhotos", { 
-              current: images.length, 
-              max: maxImages 
+            {t("listings:addMorePhotos", {
+              current: images.length,
+              max: maxImages,
             })}
           </p>
         </div>

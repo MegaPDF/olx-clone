@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Dialog,
   DialogContent,
@@ -71,7 +71,8 @@ export function ListingDetailsModal({
   onPromote,
   className,
 }: ListingDetailsModalProps) {
-  const { t, i18n } = useTranslation(["admin", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   if (!listing) return null;
 
@@ -85,8 +86,8 @@ export function ListingDetailsModal({
   };
 
   const formatTimeAgo = (date: Date) => {
-    const locale = i18n.language === "id" ? idLocale : enUS;
-    return formatDistanceToNow(date, { addSuffix: true, locale });
+    const dateFnsLocale = locale === "id" ? idLocale : enUS;
+    return formatDistanceToNow(date, { addSuffix: true, locale: dateFnsLocale });
   };
 
   const getStatusColor = (status: ListingStatus) => {

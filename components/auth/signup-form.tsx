@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
@@ -58,7 +58,8 @@ interface SignUpFormProps {
 }
 
 export function SignUpForm({ className, redirectTo }: SignUpFormProps) {
-  const { t } = useTranslation(["auth", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -101,7 +102,10 @@ export function SignUpForm({ className, redirectTo }: SignUpFormProps) {
         if (key === "location") {
           Object.entries(value).forEach(([locKey, locValue]) => {
             if (locKey === "coordinates") {
-              const coordinates = locValue as { latitude: number; longitude: number };
+              const coordinates = locValue as {
+                latitude: number;
+                longitude: number;
+              };
               formData.append("latitude", coordinates.latitude.toString());
               formData.append("longitude", coordinates.longitude.toString());
             } else {

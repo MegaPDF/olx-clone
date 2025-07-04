@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -40,7 +40,8 @@ export function ListingFilters({
   showResultCount = true,
   className,
 }: ListingFiltersProps) {
-  const { t } = useTranslation(["listings", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [isOpen, setIsOpen] = useState(false);
 
   const updateFilter = <K extends keyof ListingFilters>(

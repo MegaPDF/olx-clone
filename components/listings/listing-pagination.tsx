@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -38,7 +38,8 @@ export function ListingPagination({
   showInfo = true,
   className,
 }: ListingPaginationProps) {
-  const { t } = useTranslation(["common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   const { page, limit, total, pages, hasNext, hasPrev } = pagination;
 

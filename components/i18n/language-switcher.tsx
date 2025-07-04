@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -42,7 +42,6 @@ const languages: LanguageOption[] = [
     flag: "🇮🇩",
   },
 ];
-
 export function LanguageSwitcher({
   variant = "dropdown",
   size = "md",
@@ -51,13 +50,12 @@ export function LanguageSwitcher({
   className,
 }: LanguageSwitcherProps) {
   const router = useRouter();
-  const { i18n, t } = useTranslations("common");
-
-  const currentLanguage =
-    languages.find((lang) => lang.code === i18n.language) || languages[0];
+  const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations("common");
 
   const changeLanguage = async (locale: Locale) => {
-    if (locale === i18n.language) return;
+    if (locale === locale) return;
 
     // Get current path without locale prefix
     const currentPath = window.location.pathname;
@@ -105,13 +103,12 @@ export function LanguageSwitcher({
         {languages.map((language) => (
           <Button
             key={language.code}
-            variant={language.code === i18n.language ? "default" : "ghost"}
+            variant={language.code === locale ? "default" : "ghost"}
             size="sm"
             onClick={() => changeLanguage(language.code)}
             className={cn(
               "h-8 w-8 p-0",
-              language.code === i18n.language &&
-                "ring-2 ring-ring ring-offset-2"
+              language.code === locale && "ring-2 ring-ring ring-offset-2"
             )}
             title={language.name}
           >
@@ -125,7 +122,7 @@ export function LanguageSwitcher({
   // Button variant - toggle between languages
   if (variant === "button") {
     const nextLanguage =
-      languages.find((lang) => lang.code !== i18n.language) || languages[0];
+      languages.find((lang) => lang.code !== locale) || languages[0];
 
     return (
       <Button
@@ -182,7 +179,7 @@ export function LanguageSwitcher({
                 </span>
               </div>
             </div>
-            {language.code === i18n.language && (
+            {language.code === locale && (
               <Check className="h-4 w-4 text-primary" />
             )}
           </DropdownMenuItem>

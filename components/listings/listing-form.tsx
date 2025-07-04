@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -81,7 +81,8 @@ export function ListingForm({
   loading = false,
   className,
 }: ListingFormProps) {
-  const { t, i18n } = useTranslation(["listings", "common"]);
+  const t = useTranslations();
+  const locale = useLocale();
   const [images, setImages] = useState<string[]>(listing?.images || []);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isDraft, setIsDraft] = useState(false);

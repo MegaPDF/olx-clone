@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, createContext, useContext } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
@@ -76,7 +76,8 @@ export function Sidebar({
 }
 
 function SidebarHeader() {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const { isCollapsed } = useSidebar();
 
   return (
@@ -188,7 +189,8 @@ function SidebarNavItem({
 
 function SidebarFooter() {
   const { isCollapsed, setIsCollapsed } = useSidebar();
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <div className="border-t p-4">

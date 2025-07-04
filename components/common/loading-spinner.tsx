@@ -1,7 +1,7 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
-import { Loader2  } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface LoadingSpinnerProps {
@@ -25,7 +25,8 @@ export function LoadingSpinner({
   centered = false,
   fullScreen = false,
 }: LoadingSpinnerProps) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   const getSizeClass = () => {
     const sizeMap = {
@@ -196,7 +197,8 @@ export function PageLoader({
   text?: string;
   className?: string;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <LoadingSpinner

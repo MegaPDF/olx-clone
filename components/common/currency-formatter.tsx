@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { formatCurrency } from "@/lib/utils";
 import type { Currency, Locale } from "@/lib/types";
@@ -24,7 +24,6 @@ interface CurrencyFormatterProps {
 export function CurrencyFormatter({
   amount,
   currency = "USD",
-  locale,
   showSymbol = true,
   showCode = false,
   variant = "default",
@@ -36,8 +35,8 @@ export function CurrencyFormatter({
   showSign = false,
   decimals,
 }: CurrencyFormatterProps) {
-  const { i18n } = useTranslation();
-  const currentLocale = (locale || i18n.language) as Locale;
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale() as Locale; // CHANGED
 
   const formatAmount = (amount: number, currency: Currency, locale: Locale) => {
     const localeMap = {
@@ -109,7 +108,7 @@ export function CurrencyFormatter({
     const formattedAmount = formatAmount(
       Math.abs(displayAmount),
       currency,
-      currentLocale
+      locale
     );
 
     // For negative amounts, the formatter already includes the minus sign

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -31,7 +31,7 @@ import { MobileNav } from "./mobile-nav";
 import { useAuth } from "@/lib/hooks/use-auth";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/lib/types";
-import { LocalizedLink, useLocalizedRouter } from "../i18n/localized-link";
+import { LocalizedLink } from "../i18n/localized-link";
 import { LanguageSwitcher } from "../i18n/language-switcher";
 
 interface HeaderProps {
@@ -77,8 +77,8 @@ export function Header({
   className,
   variant = "default",
 }: HeaderProps) {
-  const { t } = useTranslation(["common", "navigation"]);
-  const router = useLocalizedRouter();
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const { user, isAuthenticated, isLoading } = useAuth();
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -158,7 +158,10 @@ export function Header({
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="flex items-center space-x-2">
               <Avatar className="h-8 w-8">
-                <AvatarImage src={user?.image || undefined} alt={user?.name || undefined} />
+                <AvatarImage
+                  src={user?.image || undefined}
+                  alt={user?.name || undefined}
+                />
                 <AvatarFallback>
                   {user?.name?.charAt(0).toUpperCase()}
                 </AvatarFallback>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -55,7 +55,8 @@ export function CopyToClipboard({
   sensitive = false,
   disabled = false,
 }: CopyToClipboardProps) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [copied, setCopied] = useState(false);
   const [showSensitive, setShowSensitive] = useState(false);
 

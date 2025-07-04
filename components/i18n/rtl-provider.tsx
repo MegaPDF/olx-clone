@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/types";
 
@@ -33,13 +33,14 @@ export function RTLProvider({
   forceDirection,
   className,
 }: RTLProviderProps) {
-  const { i18n } = useTranslation();
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [direction, setDirectionState] = useState<"ltr" | "rtl">(
     forceDirection || defaultDirection || "ltr"
   );
 
   // Determine if current language is RTL
-  const isCurrentLanguageRTL = RTL_LANGUAGES.includes(i18n.language as Locale);
+  const isCurrentLanguageRTL = RTL_LANGUAGES.includes(locale as Locale);
 
   // Auto-detect direction based on language if not forced
   useEffect(() => {
@@ -47,7 +48,7 @@ export function RTLProvider({
       const autoDirection = isCurrentLanguageRTL ? "rtl" : "ltr";
       setDirectionState(autoDirection);
     }
-  }, [i18n.language, isCurrentLanguageRTL, forceDirection]);
+  }, [locale, isCurrentLanguageRTL, forceDirection]);
 
   // Update document direction
   useEffect(() => {

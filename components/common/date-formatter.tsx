@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Tooltip,
   TooltipContent,
@@ -39,7 +39,6 @@ interface DateFormatterProps {
 export function DateFormatter({
   date,
   format: formatType = "medium",
-  locale,
   customFormat,
   showTooltip = false,
   tooltipFormat = "full",
@@ -50,8 +49,9 @@ export function DateFormatter({
   suffix,
   capitalize = false,
 }: DateFormatterProps) {
-  const { i18n } = useTranslation();
-  const currentLocale = (locale || i18n.language) as Locale;
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
+  const currentLocale = (locale || locale) as Locale;
 
   // Parse the date
   const parseDate = (dateInput: Date | string | number): Date | null => {
@@ -268,7 +268,8 @@ export function CreatedAt({
 }: Omit<DateFormatterProps, "format" | "prefix"> & {
   date: Date | string | number;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <DateFormatter
@@ -289,7 +290,8 @@ export function UpdatedAt({
 }: Omit<DateFormatterProps, "format" | "prefix"> & {
   date: Date | string | number;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <DateFormatter

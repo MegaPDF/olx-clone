@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -63,7 +63,8 @@ export function ConfirmationDialog({
   icon,
   children,
 }: ConfirmationDialogProps) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [confirmationInput, setConfirmationInput] = useState("");
   const [isAcknowledged, setIsAcknowledged] = useState(false);
 

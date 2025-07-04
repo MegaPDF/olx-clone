@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -28,7 +28,8 @@ export function BackButton({
   ...props
 }: BackButtonProps) {
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   const handleBack = () => {
     if (href) {

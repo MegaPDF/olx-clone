@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -55,7 +55,8 @@ export function RevenueChart({
   onPeriodChange,
   onExport,
 }: RevenueChartProps) {
-  const { t } = useTranslation("admin");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [chartType, setChartType] = useState<ChartType>("area");
   const [timePeriod, setTimePeriod] = useState<TimePeriod>("30d");
 

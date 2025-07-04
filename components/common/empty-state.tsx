@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Package,
@@ -88,7 +88,8 @@ export function EmptyState({
   className,
   children,
 }: EmptyStateProps) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   const getDefaultIcon = () => {
     switch (variant) {
@@ -226,7 +227,8 @@ export function NoResults({
   searchQuery?: string;
   onClear?: () => void;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <EmptyState
@@ -260,7 +262,8 @@ export function NoListings({
 }: Omit<EmptyStateProps, "variant" | "icon" | "title" | "description"> & {
   onCreateListing?: () => void;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <EmptyState
@@ -286,7 +289,8 @@ export function NoMessages({
   className,
   ...props
 }: Omit<EmptyStateProps, "variant" | "icon" | "title" | "description">) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <EmptyState
@@ -306,7 +310,8 @@ export function NoFavorites({
 }: Omit<EmptyStateProps, "variant" | "icon" | "title" | "description"> & {
   onBrowse?: () => void;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <EmptyState
@@ -332,7 +337,8 @@ export function NoNotifications({
   className,
   ...props
 }: Omit<EmptyStateProps, "variant" | "icon" | "title" | "description">) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <EmptyState
@@ -353,7 +359,8 @@ export function ErrorState({
 }: Omit<EmptyStateProps, "variant" | "icon"> & {
   onRetry?: () => void;
 }) {
-  const { t } = useTranslation("common");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   return (
     <EmptyState

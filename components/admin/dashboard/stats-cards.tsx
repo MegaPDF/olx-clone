@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -37,7 +37,8 @@ export function StatsCards({
   isLoading = false,
   className,
 }: StatsCardsProps) {
-  const { t } = useTranslation("admin");
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
 
   if (isLoading) {
     return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslation } from "next-i18next";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -142,7 +142,8 @@ export function UserForm({
   className,
   mode = user ? "edit" : "create",
 }: UserFormProps) {
-  const { t } = useTranslation(["admin", "common"]);
+  const t = useTranslations("listings"); // CHANGED
+  const locale = useLocale(); // CHANGED
   const [avatarPreview, setAvatarPreview] = useState<string | undefined>(
     user?.avatar
   );

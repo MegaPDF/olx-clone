@@ -22,8 +22,8 @@ interface HomePageProps {
   params: { locale: string };
 }
 
-export default function HomePage({ params: { locale } }: HomePageProps) {
-  const t = useTranslations("home");
+export default function HomePage() {
+  const t = useTranslations();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
 

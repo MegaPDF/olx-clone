@@ -31,8 +31,8 @@ import { MobileNav } from "./mobile-nav";
 import { useAuth } from "@/lib/hooks/use-auth";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/lib/types";
-import { LocalizedLink } from "../i18n/localized-link";
-import { LanguageSwitcher } from "../i18n/language-switcher";
+import { LocalizedLink, useLocalizedRouter } from "../i18n/localized-link";
+import LocaleSwitcher from "../i18n/LocaleSwitcher";
 
 interface HeaderProps {
   navigation?: NavItem[];
@@ -77,8 +77,9 @@ export function Header({
   className,
   variant = "default",
 }: HeaderProps) {
-  const t = useTranslations("listings"); // CHANGED
+  const t = useTranslations(); // CHANGED
   const locale = useLocale(); // CHANGED
+  const router = useLocalizedRouter();
   const { user, isAuthenticated, isLoading } = useAuth();
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -281,7 +282,7 @@ export function Header({
           <Search className="absolute left-3 top-1/2 h-4 w-4 transform -translate-y-1/2 text-muted-foreground" />
           <Input
             name="q"
-            placeholder={t("navigation:search_placeholder")}
+            placeholder={t("placeholders:search")}
             className="pl-10 pr-4"
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setIsSearchFocused(false)}
@@ -316,7 +317,7 @@ export function Header({
             <span className="text-primary-foreground font-bold">M</span>
           </div>
           <span className="hidden sm:block font-bold text-xl">
-            {t("common:site_name", "Marketplace")}
+            {t("common:site_name")}
           </span>
         </LocalizedLink>
 
@@ -344,7 +345,7 @@ export function Header({
           )}
 
           {/* Language Switcher */}
-          <LanguageSwitcher variant="dropdown" size="sm" showLabel={false} />
+          <LocaleSwitcher />
 
           {/* User Menu */}
           {renderUserMenu()}

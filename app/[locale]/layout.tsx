@@ -1,38 +1,47 @@
+import clsx from "clsx";
+import { hasLocale, Locale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { SUPPORTED_LOCALES } from "@/lib/constants";
-import type { Locale } from "@/lib/types";
+import { ReactNode } from "react";
+import { routing } from "@/i18n/routing";
+import Navigation from "@/components/Navigation";
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: Locale }>;
+};
 
-interface LocaleLayoutProps {
-  children: React.ReactNode;
-  params: { locale: string };
-}
+const inter = Inter({ subsets: ["latin"] });
 
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: LocaleLayoutProps) {
-  // Validate that the incoming locale is valid
-  if (!SUPPORTED_LOCALES.includes(locale as Locale)) {
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({ locale, namespace: "common" });
+
+  return {
+    title: t("site_name"),
+  };
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  // Fetch messages for the locale
-  let messages;
-  try {
-    messages = await getMessages();
-  } catch (error) {
-    notFound();
-  }
+  // Enable static rendering
+  setRequestLocale(locale);
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div className="min-h-screen">{children}</div>
-    </NextIntlClientProvider>
+    <html className="h-full" lang={locale}>
+      <body className={clsx(inter.className, "flex h-full flex-col")}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

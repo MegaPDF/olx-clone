@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/types";
@@ -16,6 +16,51 @@ interface LocalizedLinkProps
   activeClassName?: string;
   exactMatch?: boolean;
   disabled?: boolean;
+}
+
+// Custom hook for localized routing
+export function useLocalizedRouter() {
+  const router = useRouter();
+  const currentLocale = useLocale();
+
+  const push = (href: string, locale?: Locale) => {
+    const targetLocale = locale || currentLocale;
+    const localizedHref = createLocalizedHref(href, targetLocale as Locale);
+    router.push(localizedHref);
+  };
+
+  const replace = (href: string, locale?: Locale) => {
+    const targetLocale = locale || currentLocale;
+    const localizedHref = createLocalizedHref(href, targetLocale as Locale);
+    router.replace(localizedHref);
+  };
+
+  const back = () => {
+    router.back();
+  };
+
+  const forward = () => {
+    router.forward();
+  };
+
+  const refresh = () => {
+    router.refresh();
+  };
+
+  const prefetch = (href: string, locale?: Locale) => {
+    const targetLocale = locale || currentLocale;
+    const localizedHref = createLocalizedHref(href, targetLocale as Locale);
+    router.prefetch(localizedHref);
+  };
+
+  return {
+    push,
+    replace,
+    back,
+    forward,
+    refresh,
+    prefetch,
+  };
 }
 
 export const LocalizedLink = forwardRef<HTMLAnchorElement, LocalizedLinkProps>(

@@ -32,7 +32,7 @@ import { useAuth } from "@/lib/hooks/use-auth";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/lib/types";
 import { LocalizedLink, useLocalizedRouter } from "../i18n/localized-link";
-import { LanguageSwitcher } from "../i18n/language-switcher";
+import LocaleSwitcher from "../i18n/LocaleSwitcher";
 
 interface MobileNavProps {
   navigation: NavItem[];
@@ -297,7 +297,7 @@ export function MobileNav({
                   <span className="text-sm font-medium">
                     {t("navigation:language")}
                   </span>
-                  <LanguageSwitcher variant="minimal" size="sm" />
+                  <LocaleSwitcher />
                 </div>
               </div>
             </>

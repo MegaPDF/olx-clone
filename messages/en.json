@@ -1,561 +1,89 @@
 {
-  "navigation": {
-    "dashboard": "Dashboard",
-    "users": "Users",
-    "listings": "Listings",
-    "categories": "Categories",
-    "reports": "Reports",
-    "analytics": "Analytics",
-    "payments": "Payments",
-    "settings": "Settings"
-  },
-  "dashboard": {
-    "title": "Admin Dashboard",
-    "overview": "Overview",
-    "stats": {
-      "total_users": "Total Users",
-      "active_users": "Active Users",
-      "new_users_today": "New Users Today",
-      "total_listings": "Total Listings",
-      "active_listings": "Active Listings",
-      "sold_listings": "Sold Listings",
-      "total_revenue": "Total Revenue",
-      "monthly_revenue": "Monthly Revenue",
-      "pending_reports": "Pending Reports",
-      "growth": "Growth",
-      "vs_last_month": "vs last month"
-    },
-    "charts": {
-      "user_growth": "User Growth",
-      "listing_activity": "Listing Activity",
-      "revenue_trend": "Revenue Trend",
-      "category_distribution": "Category Distribution"
-    },
-    "recent_activity": {
-      "title": "Recent Activity",
-      "new_user": "New user registered",
-      "new_listing": "New listing created",
-      "listing_sold": "Listing marked as sold",
-      "report_submitted": "Report submitted",
-      "payment_received": "Payment received",
-      "view_all": "View All Activity"
-    },
-    "quick_actions": {
-      "title": "Quick Actions",
-      "create_category": "Create Category",
-      "review_reports": "Review Reports",
-      "manage_users": "Manage Users",
-      "view_analytics": "View Analytics"
-    }
-  },
-  "users": {
-    "title": "User Management",
-    "total_users": "Total Users",
-    "active_users": "Active Users",
-    "new_users": "New Users",
-    "suspended_users": "Suspended Users",
-    "search_users": "Search users...",
-    "filter_by": "Filter by",
-    "all_users": "All Users",
-    "admins": "Admins",
-    "moderators": "Moderators",
-    "regular_users": "Regular Users",
-    "table": {
-      "name": "Name",
-      "email": "Email",
-      "role": "Role",
-      "status": "Status",
-      "joined": "Joined",
-      "last_login": "Last Login",
-      "listings": "Listings",
-      "actions": "Actions"
-    },
-    "actions": {
-      "view": "View",
-      "edit": "Edit",
-      "suspend": "Suspend",
-      "activate": "Activate",
-      "ban": "Ban",
-      "delete": "Delete",
-      "send_message": "Send Message",
-      "view_listings": "View Listings"
-    },
-    "status": {
-      "active": "Active",
-      "suspended": "Suspended",
-      "banned": "Banned"
-    },
-    "roles": {
-      "user": "User",
-      "admin": "Admin",
-      "moderator": "Moderator"
-    },
-    "bulk_actions": {
-      "select_all": "Select All",
-      "suspend_selected": "Suspend Selected",
-      "activate_selected": "Activate Selected",
-      "delete_selected": "Delete Selected"
-    },
-    "user_details": {
-      "title": "User Details",
-      "basic_info": "Basic Information",
-      "contact_info": "Contact Information",
-      "account_info": "Account Information",
-      "statistics": "Statistics",
-      "recent_listings": "Recent Listings",
-      "activity_log": "Activity Log"
-    }
-  },
-  "listings": {
-    "title": "Listing Management",
-    "total_listings": "Total Listings",
-    "active_listings": "Active Listings",
-    "pending_review": "Pending Review",
-    "reported_listings": "Reported Listings",
-    "search_listings": "Search listings...",
-    "filter_by": "Filter by",
-    "all_listings": "All Listings",
-    "by_status": "By Status",
-    "by_category": "By Category",
-    "table": {
-      "title": "Title",
-      "seller": "Seller",
-      "category": "Category",
-      "price": "Price",
-      "status": "Status",
-      "created": "Created",
-      "views": "Views",
-      "actions": "Actions"
-    },
-    "actions": {
-      "view": "View",
-      "edit": "Edit",
-      "approve": "Approve",
-      "reject": "Reject",
-      "suspend": "Suspend",
-      "feature": "Feature",
-      "delete": "Delete"
-    },
-    "status": {
-      "active": "Active",
-      "draft": "Draft",
-      "pending": "Pending",
-      "suspended": "Suspended",
-      "sold": "Sold",
-      "expired": "Expired"
-    },
-    "bulk_actions": {
-      "approve_selected": "Approve Selected",
-      "reject_selected": "Reject Selected",
-      "suspend_selected": "Suspend Selected",
-      "delete_selected": "Delete Selected"
-    }
-  },
-  "categories": {
-    "title": "Category Management",
-    "create_category": "Create Category",
-    "edit_category": "Edit Category",
-    "total_categories": "Total Categories",
-    "active_categories": "Active Categories",
-    "form": {
-      "name_en": "Name (English)",
-      "name_id": "Name (Indonesian)",
-      "slug": "Slug",
-      "description_en": "Description (English)",
-      "description_id": "Description (Indonesian)",
-      "parent": "Parent Category",
-      "icon": "Icon",
-      "image": "Image",
-      "sort_order": "Sort Order",
-      "active": "Active",
-      "seo": "SEO Settings",
-      "meta_title_en": "Meta Title (English)",
-      "meta_title_id": "Meta Title (Indonesian)",
-      "meta_description_en": "Meta Description (English)",
-      "meta_description_id": "Meta Description (Indonesian)",
-      "keywords": "Keywords"
-    },
-    "table": {
-      "name": "Name",
-      "slug": "Slug",
-      "parent": "Parent",
-      "listings": "Listings",
-      "status": "Status",
-      "sort_order": "Order",
-      "actions": "Actions"
-    },
-    "actions": {
-      "edit": "Edit",
-      "delete": "Delete",
-      "activate": "Activate",
-      "deactivate": "Deactivate",
-      "view_listings": "View Listings"
-    }
-  },
-  "reports": {
-    "title": "Report Management",
-    "pending_reports": "Pending Reports",
-    "resolved_reports": "Resolved Reports",
-    "filter_by": "Filter by",
-    "all_reports": "All Reports",
-    "by_type": "By Type",
-    "by_status": "By Status",
-    "by_priority": "By Priority",
-    "table": {
-      "type": "Type",
-      "target": "Target",
-      "reporter": "Reporter",
-      "reason": "Reason",
-      "status": "Status",
-      "priority": "Priority",
-      "created": "Created",
-      "actions": "Actions"
-    },
-    "types": {
-      "listing": "Listing",
-      "user": "User",
-      "message": "Message"
-    },
-    "status": {
-      "pending": "Pending",
-      "investigating": "Investigating",
-      "resolved": "Resolved",
-      "dismissed": "Dismissed"
-    },
-    "priority": {
-      "low": "Low",
-      "medium": "Medium",
-      "high": "High",
-      "urgent": "Urgent"
-    },
-    "actions": {
-      "view": "View",
-      "investigate": "Investigate",
-      "resolve": "Resolve",
-      "dismiss": "Dismiss",
-      "escalate": "Escalate"
-    },
-    "resolve": {
-      "title": "Resolve Report",
-      "action": "Action Taken",
-      "no_action": "No Action Required",
-      "warning": "Warning Sent",
-      "content_removed": "Content Removed",
-      "user_suspended": "User Suspended",
-      "user_banned": "User Banned",
-      "notes": "Resolution Notes",
-      "resolve": "Resolve Report"
-    }
-  },
-  "analytics": {
-    "title": "Analytics",
-    "overview": "Overview",
-    "users": "User Analytics",
-    "listings": "Listing Analytics",
-    "revenue": "Revenue Analytics",
-    "categories": "Category Analytics",
-    "date_range": "Date Range",
-    "last_7_days": "Last 7 Days",
-    "last_30_days": "Last 30 Days",
-    "last_90_days": "Last 90 Days",
-    "custom_range": "Custom Range",
-    "metrics": {
-      "page_views": "Page Views",
-      "unique_visitors": "Unique Visitors",
-      "conversion_rate": "Conversion Rate",
-      "bounce_rate": "Bounce Rate",
-      "avg_session": "Avg Session Duration",
-      "top_categories": "Top Categories",
-      "top_locations": "Top Locations",
-      "user_growth": "User Growth",
-      "listing_growth": "Listing Growth"
-    }
-  },
-  "payments": {
-    "title": "Payment Management",
-    "total_revenue": "Total Revenue",
-    "monthly_revenue": "Monthly Revenue",
-    "pending_payments": "Pending Payments",
-    "failed_payments": "Failed Payments",
-    "search_payments": "Search payments...",
-    "filter_by": "Filter by",
-    "all_payments": "All Payments",
-    "by_status": "By Status",
-    "by_type": "By Type",
-    "table": {
-      "transaction_id": "Transaction ID",
-      "user": "User",
-      "type": "Type",
-      "amount": "Amount",
-      "status": "Status",
-      "date": "Date",
-      "actions": "Actions"
-    },
-    "types": {
-      "promotion": "Promotion",
-      "subscription": "Subscription",
-      "featured_listing": "Featured Listing"
-    },
-    "status": {
-      "pending": "Pending",
-      "completed": "Completed",
-      "failed": "Failed",
-      "refunded": "Refunded",
-      "cancelled": "Cancelled"
-    },
-    "actions": {
-      "view": "View",
-      "refund": "Refund",
-      "retry": "Retry",
-      "download_invoice": "Download Invoice"
-    }
-  },
-  "settings": {
-    "title": "System Settings",
-    "general": "General Settings",
-    "aws": "AWS Configuration",
-    "stripe": "Stripe Configuration",
-    "oauth": "OAuth Settings",
-    "email": "Email Settings",
-    "pricing": "Pricing Settings",
-    "features": "Feature Settings",
-    "general_form": {
-      "site_name": "Site Name",
-      "site_description": "Site Description",
-      "site_url": "Site URL",
-      "contact_email": "Contact Email",
-      "support_email": "Support Email",
-      "maintenance_mode": "Maintenance Mode",
-      "registration_enabled": "Registration Enabled"
-    },
-    "aws_form": {
-      "access_key": "Access Key ID",
-      "secret_key": "Secret Access Key",
-      "region": "Region",
-      "bucket_name": "S3 Bucket Name",
-      "cloudfront_url": "CloudFront URL"
-    },
-    "stripe_form": {
-      "public_key": "Public Key",
-      "secret_key": "Secret Key",
-      "webhook_secret": "Webhook Secret",
-      "currency": "Default Currency"
-    },
-    "oauth_form": {
-      "google_enabled": "Google OAuth Enabled",
-      "google_client_id": "Google Client ID",
-      "google_secret": "Google Client Secret",
-      "facebook_enabled": "Facebook OAuth Enabled",
-      "facebook_app_id": "Facebook App ID",
-      "facebook_secret": "Facebook App Secret"
-    },
-    "email_form": {
-      "provider": "Email Provider",
-      "from_email": "From Email",
-      "from_name": "From Name",
-      "smtp_host": "SMTP Host",
-      "smtp_port": "SMTP Port",
-      "smtp_user": "SMTP Username",
-      "smtp_password": "SMTP Password",
-      "sendgrid_key": "SendGrid API Key"
-    },
-    "pricing_form": {
-      "featured_price": "Featured Listing Price",
-      "urgent_price": "Urgent Listing Price",
-      "highlight_price": "Highlight Listing Price",
-      "basic_monthly": "Basic Plan Monthly",
-      "basic_yearly": "Basic Plan Yearly",
-      "premium_monthly": "Premium Plan Monthly",
-      "premium_yearly": "Premium Plan Yearly"
-    },
-    "features_form": {
-      "chat_enabled": "Chat Feature",
-      "favorites_enabled": "Favorites Feature",
-      "reports_enabled": "Reports Feature",
-      "promotions_enabled": "Promotions Feature",
-      "subscriptions_enabled": "Subscriptions Feature",
-      "geolocation_enabled": "Geolocation Feature"
-    },
-    "save": "Save Settings",
-    "saving": "Saving...",
-    "saved": "Settings saved successfully!"
-  },
-  "actions": {
-    "create": "Create",
-    "edit": "Edit",
-    "delete": "Delete",
-    "approve": "Approve",
-    "reject": "Reject",
-    "suspend": "Suspend",
-    "activate": "Activate",
-    "ban": "Ban",
-    "resolve": "Resolve",
-    "dismiss": "Dismiss",
-    "view": "View",
-    "export": "Export",
-    "import": "Import",
-    "refresh": "Refresh"
-  },
-  "confirmation": {
-    "delete_user": "Are you sure you want to delete this user?",
-    "suspend_user": "Are you sure you want to suspend this user?",
-    "ban_user": "Are you sure you want to ban this user?",
-    "delete_listing": "Are you sure you want to delete this listing?",
-    "delete_category": "Are you sure you want to delete this category?",
-    "resolve_report": "Are you sure you want to resolve this report?",
-    "cannot_be_undone": "This action cannot be undone."
-  },
-  "signin": {
-    "title": "Sign In",
-    "subtitle": "Welcome back! Please sign in to your account",
-    "email": "Email address",
-    "password": "Password",
-    "remember_me": "Remember me",
-    "forgot_password": "Forgot password?",
-    "signin_button": "Sign In",
-    "no_account": "Don't have an account?",
-    "signup_link": "Sign up here",
-    "or": "Or",
-    "continue_with": "Continue with",
-    "google": "Google",
-    "facebook": "Facebook",
-    "success": "Successfully signed in!",
-    "welcome_back": "Welcome back, {{name}}!"
-  },
-  "signup": {
-    "title": "Sign Up",
-    "subtitle": "Create your account to start buying and selling",
-    "name": "Full name",
-    "email": "Email address",
-    "password": "Password",
-    "confirm_password": "Confirm password",
-    "phone": "Phone number (optional)",
-    "location": "Location",
-    "address": "Street address",
-    "city": "City",
-    "state": "State/Province",
-    "country": "Country",
-    "coordinates": "Location coordinates",
-    "terms": "I agree to the Terms of Service and Privacy Policy",
-    "newsletter": "Subscribe to newsletter (optional)",
-    "signup_button": "Create Account",
-    "creating_account": "Creating account...",
-    "have_account": "Already have an account?",
-    "signin_link": "Sign in here",
-    "success": "Account created successfully!",
-    "verify_email": "Please check your email to verify your account"
-  },
-  "logout": {
-    "title": "Sign Out",
-    "message": "Are you sure you want to sign out?",
-    "confirm": "Sign Out",
-    "success": "Successfully signed out"
-  },
-  "forgot_password": {
-    "title": "Forgot Password",
-    "subtitle": "Enter your email to receive a password reset link",
-    "email": "Email address",
-    "send_button": "Send Reset Link",
-    "sending": "Sending...",
-    "success": "Reset link sent to your email",
-    "back_to_signin": "Back to sign in",
-    "remember_password": "Remember your password?"
-  },
-  "reset_password": {
-    "title": "Reset Password",
-    "subtitle": "Enter your new password",
-    "new_password": "New password",
-    "confirm_password": "Confirm new password",
-    "reset_button": "Reset Password",
-    "resetting": "Resetting...",
-    "success": "Password reset successfully!",
-    "signin_now": "You can now sign in with your new password"
-  },
-  "verify_email": {
-    "title": "Verify Email",
-    "subtitle": "We've sent a verification link to your email",
-    "message": "Please check your email and click the verification link to activate your account",
-    "resend": "Resend verification email",
-    "resending": "Resending...",
-    "resent": "Verification email sent!",
-    "verified": "Email verified successfully!",
-    "invalid_token": "Invalid or expired verification link",
-    "already_verified": "Email already verified"
-  },
-  "change_password": {
-    "title": "Change Password",
-    "current_password": "Current password",
-    "new_password": "New password",
-    "confirm_password": "Confirm new password",
-    "change_button": "Change Password",
-    "changing": "Changing...",
-    "success": "Password changed successfully!"
-  },
-  "errors": {
-    "invalid_credentials": "Invalid email or password",
-    "email_required": "Email is required",
-    "password_required": "Password is required",
-    "name_required": "Name is required",
-    "passwords_not_match": "Passwords do not match",
-    "password_too_short": "Password must be at least 8 characters",
-    "password_requirements": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
-    "email_invalid": "Please enter a valid email address",
-    "email_exists": "Email already registered",
-    "phone_invalid": "Please enter a valid phone number",
-    "phone_exists": "Phone number already registered",
-    "terms_required": "You must accept the terms and conditions",
-    "location_required": "Location is required",
-    "account_suspended": "Your account has been suspended",
-    "account_banned": "Your account has been banned",
-    "email_not_verified": "Please verify your email address",
-    "token_expired": "Token has expired",
-    "token_invalid": "Invalid token",
-    "user_not_found": "User not found",
-    "session_expired": "Your session has expired. Please sign in again",
-    "unauthorized": "You are not authorized to perform this action",
-    "rate_limit": "Too many attempts. Please try again later"
-  },
-  "oauth": {
-    "google_signin": "Sign in with Google",
-    "facebook_signin": "Sign in with Facebook",
-    "oauth_error": "Authentication failed. Please try again",
-    "oauth_cancelled": "Authentication was cancelled",
-    "linking_accounts": "Linking accounts...",
-    "account_linked": "Account linked successfully!"
-  },
-  "validation": {
-    "email_format": "Please enter a valid email address",
-    "password_length": "Password must be at least 8 characters long",
-    "password_strength": "Password must contain uppercase, lowercase, and numbers",
-    "name_length": "Name must be between 2 and 100 characters",
-    "phone_format": "Please enter a valid phone number",
-    "required_field": "This field is required",
-    "terms_acceptance": "You must accept the terms and conditions"
-  },
-  "app": {
-    "name": "OLX Marketplace",
+  "site_name": "OLX Marketplace",
+  "tagline": "Buy and sell locally with ease",
+  "description": "Your trusted local marketplace for buying and selling items in your community",
+  "back": "Back",
+  "next": "Next",
+  "previous": "Previous",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "edit": "Edit",
+  "view": "View",
+  "share": "Share",
+  "report": "Report",
+  "contact": "Contact",
+  "submit": "Submit",
+  "confirm": "Confirm",
+  "retry": "Retry",
+  "refresh": "Refresh",
+  "load_more": "Load More",
+  "show_more": "Show More",
+  "show_less": "Show Less",
+  "upload": "Upload",
+  "download": "Download",
+  "copy": "Copy",
+  "print": "Print",
+  "close": "Close",
+  "open": "Open",
+  "expand": "Expand",
+  "collapse": "Collapse",
+  "filter": "Filter",
+  "sort": "Sort",
+  "clear": "Clear",
+  "apply": "Apply",
+  "reset": "Reset",
+  "update": "Update",
+  "create": "Create",
+  "add": "Add",
+  "remove": "Remove",
+  "select": "Select",
+  "choose": "Choose",
+  "browse": "Browse",
+  "search": "Search",
+  "find": "Find",
+  "optional": "Optional",
+  "required": "Required",
+  "characters": "characters",
+  "save_settings": "Save Settings",
+  "loading": "Loading...",
+  "saving": "Saving...",
+  "success": "Success!",
+  "error": "Error occurred",
+  "warning": "Warning",
+  "info": "Information",
+  "pending": "Pending",
+  "completed": "Completed",
+  "failed": "Failed",
+  "cancelled": "Cancelled",
+  "active": "Active",
+  "inactive": "Inactive",
+  "enabled": "Enabled",
+  "disabled": "Disabled",
+  "online": "Online",
+  "offline": "Offline",
+  "available": "Available",
+  "unavailable": "Unavailable",
+  "published": "Published",
+  "draft": "Draft",
+  "expired": "Expired",
+  "suspended": "Suspended",
+  "listing": "listing",
+  "listings": "listings",
+  "user": "user",
+  "users": "users",
+  "message": "message",
+  "messages": "messages",
+  "this_item": "this item",
+  "switch_to": "Switch to {{language}}",
+
+  "common": {
+    "site_name": "OLX Marketplace",
     "tagline": "Buy and sell locally with ease",
-    "description": "Your trusted local marketplace for buying and selling items in your community"
-  },
-  "navigation": {
-    "home": "Home",
-    "browse": "Browse",
-    "sell": "Sell",
-    "messages": "Messages",
-    "favorites": "Favorites",
-    "profile": "Profile",
-    "admin": "Admin",
-    "help": "Help",
-    "about": "About",
-    "contact": "Contact",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "blog": "Blog",
-    "categories": "Categories",
-    "search": "Search",
-    "advanced_search": "Advanced Search"
-  },
-  "actions": {
+    "description": "Your trusted local marketplace for buying and selling items in your community",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
@@ -564,9 +92,6 @@
     "share": "Share",
     "report": "Report",
     "contact": "Contact",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
     "submit": "Submit",
     "confirm": "Confirm",
     "retry": "Retry",
@@ -595,9 +120,11 @@
     "choose": "Choose",
     "browse": "Browse",
     "search": "Search",
-    "find": "Find"
-  },
-  "status": {
+    "find": "Find",
+    "optional": "Optional",
+    "required": "Required",
+    "characters": "characters",
+    "save_settings": "Save Settings",
     "loading": "Loading...",
     "saving": "Saving...",
     "success": "Success!",
@@ -619,8 +146,739 @@
     "published": "Published",
     "draft": "Draft",
     "expired": "Expired",
-    "suspended": "Suspended"
+    "suspended": "Suspended",
+    "listing": "listing",
+    "listings": "listings",
+    "user": "user",
+    "users": "users",
+    "message": "message",
+    "messages": "messages",
+    "this_item": "this item",
+    "switch_to": "Switch to {{language}}",
+    "language": "Language"
   },
+
+  "navigation": {
+    "home": "Home",
+    "browse": "Browse",
+    "sell": "Sell",
+    "create_listing": "Create Listing",
+    "messages": "Messages",
+    "favorites": "Favorites",
+    "profile": "Profile",
+    "my_listings": "My Listings",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "help": "Help",
+    "about": "About",
+    "contact": "Contact",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "blog": "Blog",
+    "categories": "Categories",
+    "search": "Search",
+    "advanced_search": "Advanced Search",
+    "settings": "Settings",
+    "account": "Account",
+    "notifications": "Notifications",
+    "sign_in": "Sign In",
+    "sign_out": "Sign Out",
+    "sign_up": "Sign Up",
+    "expand_sidebar": "Expand Sidebar",
+    "collapse_sidebar": "Collapse Sidebar",
+    "collapse": "Collapse",
+    "users": "Users",
+    "reports": "Reports",
+    "analytics": "Analytics",
+    "payments": "Payments",
+    "listings": "Listings",
+    "menu": "Menu",
+    "search_placeholder": "Search for items...",
+    "language": "Language"
+  },
+
+  "auth": {
+    "signin": {
+      "title": "Sign In",
+      "subtitle": "Welcome back! Please sign in to your account",
+      "email_signin": "Sign in with Email",
+      "forgot_password": "Forgot Password?",
+      "no_account": "Don't have an account?",
+      "create_account": "Create Account",
+      "remember_me": "Remember me",
+      "signing_in": "Signing in...",
+      "success": "Sign in successful!",
+      "check_email": "Check your email for a sign-in link"
+    },
+    "signup": {
+      "title": "Create Account",
+      "subtitle": "Join our marketplace community",
+      "have_account": "Already have an account?",
+      "sign_in_here": "Sign in here",
+      "creating_account": "Creating account...",
+      "success": "Account created successfully!",
+      "verify_email": "Please verify your email address",
+      "step_basic": "Basic Information",
+      "step_location": "Location",
+      "step_preferences": "Preferences"
+    },
+    "fields": {
+      "email": "Email Address",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "address": "Street Address",
+      "city": "City",
+      "state": "State/Province",
+      "country": "Country",
+      "accept_terms": "I accept the terms and conditions",
+      "newsletter": "Subscribe to newsletter"
+    },
+    "placeholders": {
+      "email": "Enter your email address",
+      "password": "Enter your password",
+      "confirm_password": "Confirm your password",
+      "name": "Enter your full name",
+      "phone": "Enter your phone number",
+      "address": "Enter your street address",
+      "city": "Enter your city",
+      "state": "Enter your state/province",
+      "country": "Select your country"
+    },
+    "errors": {
+      "signin_failed": "Sign in failed. Please check your credentials",
+      "signup_failed": "Sign up failed. Please try again",
+      "generic": "An error occurred. Please try again",
+      "invalid_credentials": "Invalid email or password",
+      "account_not_verified": "Please verify your email address",
+      "account_suspended": "Your account has been suspended",
+      "session_expired": "Your session has expired. Please sign in again",
+      "unauthorized": "You are not authorized to perform this action",
+      "rate_limit": "Too many attempts. Please try again later",
+      "oauth_signin": "OAuth sign in failed",
+      "oauth_callback": "OAuth callback error",
+      "oauth_create_account": "Failed to create OAuth account",
+      "email_create_account": "Failed to create email account",
+      "callback": "Authentication callback failed",
+      "oauth_account_not_linked": "OAuth account not linked",
+      "session_required": "Session required"
+    },
+    "oauth": {
+      "google_signin": "Sign in with Google",
+      "facebook_signin": "Sign in with Facebook",
+      "oauth_error": "Authentication failed. Please try again",
+      "oauth_cancelled": "Authentication was cancelled",
+      "linking_accounts": "Linking accounts...",
+      "account_linked": "Account linked successfully!"
+    },
+    "verification": {
+      "email": {
+        "title": "Email Verification",
+        "description": "We've sent a verification link to your email address",
+        "resend": "Resend Email",
+        "verified": "Your email has been verified!",
+        "failed": "Email verification failed"
+      },
+      "phone": {
+        "title": "Phone Verification",
+        "description": "Verify your phone number to enable SMS notifications",
+        "send_code": "Send Verification Code",
+        "enter_code": "Enter the code sent to your phone",
+        "code": "Verification Code",
+        "verify": "Verify Phone",
+        "verified": "Your phone has been verified!",
+        "failed": "Phone verification failed",
+        "invalid_code": "Invalid verification code"
+      }
+    }
+  },
+
+  "listings": {
+    "title": "Title",
+    "description": "Description",
+    "price": "Price",
+    "category": "Category",
+    "location": "Location",
+    "images": "Images",
+    "allCategories": "All Categories",
+    "condition": {
+      "label": "Condition",
+      "new": "New",
+      "like_new": "Like New",
+      "like-new": "Like New",
+      "good": "Good",
+      "used_good": "Used - Good",
+      "fair": "Fair",
+      "used_fair": "Used - Fair",
+      "poor": "Poor",
+      "refurbished": "Refurbished"
+    },
+    "titleDescription": "Enter a clear, descriptive title for your listing",
+    "descriptionPlaceholder": "Describe your item in detail...",
+    "selectCategory": "Select a category",
+    "create_listing": "Create Listing",
+    "create_first": "Create your first listing to start selling",
+    "no_listings": "You haven't created any listings yet",
+    "clear_search": "Clear Search",
+    "back": "Back",
+    "empty_states": {
+      "no_results": "No results found",
+      "no_results_for": "No results found for \"{{query}}\"",
+      "try_different_search": "Try adjusting your search terms or filters",
+      "no_listings": "No listings found",
+      "no_listings_description": "Start by creating your first listing",
+      "no_messages": "No messages yet",
+      "no_messages_description": "Your conversations will appear here",
+      "no_favorites": "No favorites yet",
+      "no_favorites_description": "Items you save will appear here"
+    },
+    "actions": {
+      "edit": "Edit",
+      "promote": "Promote",
+      "renew": "Renew",
+      "mark_sold": "Mark as Sold",
+      "delete": "Delete",
+      "view": "View",
+      "duplicate": "Duplicate"
+    },
+    "stats": {
+      "views": "Views",
+      "favorites": "Favorites",
+      "messages": "Messages",
+      "expires_in": "Expires in {{days}} days"
+    },
+    "bulk_actions": {
+      "select_all": "Select All",
+      "delete_selected": "Delete Selected",
+      "mark_sold": "Mark as Sold",
+      "renew_selected": "Renew Selected"
+    },
+    "promotion": {
+      "title": "Promote Your Listing",
+      "featured": "Featured Listing",
+      "urgent": "Urgent Listing",
+      "highlight": "Highlight Listing",
+      "select_package": "Select Package",
+      "promote_now": "Promote Now",
+      "already_promoted": "This listing is already promoted until {{date}}"
+    },
+    "categories": {
+      "electronics": "Electronics",
+      "vehicles": "Vehicles",
+      "home_garden": "Home & Garden",
+      "fashion_beauty": "Fashion & Beauty",
+      "sports_recreation": "Sports & Recreation",
+      "books_media": "Books & Media",
+      "services": "Services",
+      "jobs": "Jobs",
+      "real_estate": "Real Estate",
+      "pets_animals": "Pets & Animals",
+      "mobile_phones": "Mobile Phones",
+      "computers_laptops": "Computers & Laptops",
+      "tablets": "Tablets",
+      "audio_headphones": "Audio & Headphones",
+      "gaming": "Gaming",
+      "cars": "Cars",
+      "motorcycles": "Motorcycles",
+      "trucks_commercial": "Trucks & Commercial",
+      "spare_parts": "Spare Parts",
+      "furniture": "Furniture",
+      "appliances": "Appliances",
+      "garden_outdoor": "Garden & Outdoor",
+      "home_decor": "Home Decor"
+    },
+    "filters": {
+      "all_categories": "All Categories",
+      "price_range": "Price Range",
+      "location_filter": "Location",
+      "condition_filter": "Condition",
+      "features": "Features",
+      "promoted_only": "Promoted Only",
+      "verified_only": "Verified Only",
+      "clear_all": "Clear All Filters",
+      "show_results": "Show Results"
+    },
+    "validation": {
+      "title_required": "Title is required",
+      "title_length": "Title must be between 5 and 100 characters",
+      "description_required": "Description is required",
+      "description_length": "Description must be between 20 and 2000 characters",
+      "category_required": "Please select a category",
+      "price_required": "Price is required",
+      "price_positive": "Price must be a positive number",
+      "condition_required": "Please select item condition",
+      "images_required": "At least one image is required",
+      "images_max": "Maximum 10 images allowed",
+      "location_required": "Location is required",
+      "address_required": "Address is required",
+      "city_required": "City is required",
+      "invalid_image": "Invalid image format",
+      "image_too_large": "Image size too large (max 5MB)"
+    },
+    "limits": {
+      "free_limit": "Free users can create up to 5 listings",
+      "basic_limit": "Basic plan allows up to 50 listings",
+      "premium_limit": "Premium plan allows up to 200 listings",
+      "upgrade_required": "Upgrade your plan to create more listings",
+      "limit_reached": "You have reached your listing limit"
+    },
+    "report": {
+      "title": "Report Listing",
+      "reason": "Reason for reporting",
+      "spam": "Spam or Misleading",
+      "inappropriate": "Inappropriate Content",
+      "fraud": "Fraud or Scam",
+      "duplicate": "Duplicate Listing",
+      "other": "Other",
+      "description": "Additional details",
+      "submit": "Submit Report",
+      "success": "Thank you for your report. We'll review your report.",
+      "already_reported": "You have already reported this listing"
+    }
+  },
+
+  "profile": {
+    "dashboard": {
+      "title": "Profile Dashboard",
+      "welcome": "Welcome back, {{name}}!",
+      "member_since": "Member since {{date}}",
+      "stats": {
+        "total_listings": "Total Listings",
+        "active_listings": "Active Listings",
+        "sold_items": "Sold Items",
+        "total_views": "Total Views",
+        "rating": "Rating",
+        "reviews": "Reviews"
+      },
+      "quick_actions": {
+        "title": "Quick Actions",
+        "create_listing": "Create New Listing",
+        "manage_listings": "Manage Listings",
+        "view_messages": "View Messages",
+        "update_profile": "Update Profile"
+      },
+      "recent_activity": {
+        "title": "Recent Activity",
+        "no_activity": "No recent activity"
+      }
+    },
+    "edit": {
+      "title": "Edit Profile",
+      "personal_info": "Personal Information",
+      "contact_info": "Contact Information",
+      "location_info": "Location Information",
+      "preferences": "Preferences",
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "avatar": "Profile Picture",
+        "change_avatar": "Change Picture",
+        "upload_avatar": "Upload New Picture",
+        "remove_avatar": "Remove Picture",
+        "address": "Street Address",
+        "city": "City",
+        "state": "State/Province",
+        "country": "Country",
+        "language": "Language",
+        "currency": "Currency",
+        "theme": "Theme",
+        "notifications": "Notification Preferences",
+        "email_notifications": "Email Notifications",
+        "push_notifications": "Push Notifications",
+        "sms_notifications": "SMS Notifications"
+      },
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "success": "Profile updated successfully!",
+      "cancel": "Cancel Changes"
+    },
+    "listings": {
+      "title": "My Listings",
+      "create_new": "Create New Listing",
+      "filter_by": "Filter by",
+      "all_status": "All Status",
+      "active": "Active",
+      "draft": "Draft",
+      "sold": "Sold",
+      "expired": "Expired",
+      "suspended": "Suspended",
+      "no_listings": "You haven't created any listings yet"
+    },
+    "favorites": {
+      "title": "My Favorites",
+      "subtitle": "Items you've saved for later",
+      "no_favorites": "You haven't added any favorites yet",
+      "browse_items": "Browse items to add to your favorites",
+      "remove": "Remove from Favorites",
+      "remove_confirm": "Remove this item from your favorites?"
+    }
+  },
+
+  "messages": {
+    "title": "Messages",
+    "conversations": "Conversations",
+    "new_message": "New Message",
+    "search_conversations": "Search conversations...",
+    "no_conversations": "No conversations yet",
+    "start_messaging": "Contact a seller to start messaging",
+    "conversation_with": "Conversation with {{name}}",
+    "about_listing": "About: {{title}}",
+    "compose": {
+      "title": "New Message",
+      "to": "To",
+      "select_recipient": "Select recipient",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "cancel": "Cancel",
+      "attach_file": "Attach File",
+      "emoji": "Add Emoji"
+    },
+    "chat": {
+      "type_message": "Type a message...",
+      "send": "Send",
+      "sending": "Sending...",
+      "message_sent": "Message sent",
+      "message_failed": "Failed to send message",
+      "retry": "Retry",
+      "online": "Online",
+      "typing": "{{name}} is typing...",
+      "last_seen": "Last seen {{time}}",
+      "read": "Read",
+      "delivered": "Delivered",
+      "sent": "Sent"
+    },
+    "quick_replies": {
+      "interested": "I'm interested in this item",
+      "available": "Is this still available?",
+      "price": "What's your best price?",
+      "more_info": "Can you provide more information?",
+      "negotiate_price": "Would you consider {{price}}?",
+      "meet_location": "Where can we meet?",
+      "payment_method": "What payment methods do you accept?",
+      "custom_message": "Write your own message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message sent successfully!"
+    },
+    "conversation_info": {
+      "title": "Conversation Info",
+      "participants": "Participants",
+      "created": "Created",
+      "messages": "Messages",
+      "shared_media": "Shared Media",
+      "listing_info": "Listing Information",
+      "seller_rating": "Seller Rating",
+      "view_profile": "View Profile",
+      "view_listing": "View Listing"
+    },
+    "attachment": {
+      "image": "Image",
+      "file": "File",
+      "location": "Location",
+      "contact": "Contact",
+      "upload_failed": "Upload failed",
+      "file_too_large": "File too large",
+      "unsupported_type": "Unsupported file type"
+    },
+    "safety": {
+      "title": "Safety Tips",
+      "meet_public": "Meet in a public place",
+      "bring_friend": "Bring a friend if possible",
+      "trust_instincts": "Trust your instincts",
+      "verify_identity": "Verify the seller's identity",
+      "inspect_item": "Inspect the item before payment",
+      "use_secure_payment": "Use secure payment methods",
+      "report_suspicious": "Report suspicious behavior"
+    },
+    "errors": {
+      "failed_to_load": "Failed to load messages",
+      "failed_to_send": "Failed to send message",
+      "connection_lost": "Connection lost",
+      "user_blocked": "This user has been blocked",
+      "conversation_not_found": "Conversation not found",
+      "message_too_long": "Message is too long",
+      "attachment_failed": "Failed to attach file",
+      "rate_limited": "You're sending messages too quickly"
+    },
+    "settings": {
+      "title": "Message Settings",
+      "notifications": "Notifications",
+      "email_notifications": "Email notifications for messages",
+      "push_notifications": "Push notifications for messages",
+      "sound_notifications": "Sound notifications",
+      "message_preview": "Show message preview",
+      "read_receipts": "Send read receipts",
+      "typing_indicators": "Show typing indicators",
+      "auto_archive": "Auto-archive old conversations",
+      "blocked_users": "Blocked Users",
+      "privacy": "Privacy Settings",
+      "who_can_message": "Who can message me",
+      "anyone": "Anyone",
+      "verified_users": "Verified users only",
+      "no_one": "No one"
+    },
+    "empty_states": {
+      "no_messages": "No messages in this conversation",
+      "start_conversation": "Send a message to start the conversation",
+      "no_results": "No conversations found",
+      "all_caught_up": "You're all caught up!"
+    }
+  },
+
+  "payment": {
+    "subscription_plans": {
+      "title": "Choose Your Plan",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "save": "Save {{percentage}}%",
+      "current_plan": "Current Plan",
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "free": {
+        "name": "Free",
+        "description": "Perfect for casual sellers",
+        "price": "Free",
+        "features": [
+          "Up to 2 active listings",
+          "Basic support",
+          "Standard visibility"
+        ]
+      },
+      "basic": {
+        "name": "Basic",
+        "description": "Great for regular sellers",
+        "features": [
+          "Up to 10 active listings",
+          "Priority support",
+          "Enhanced visibility",
+          "Basic analytics"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Best for power sellers",
+        "features": [
+          "Unlimited listings",
+          "Premium support",
+          "Maximum visibility",
+          "Advanced analytics",
+          "Featured placement"
+        ]
+      }
+    },
+    "billing": {
+      "title": "Billing & Subscriptions",
+      "current_plan": "Current Plan",
+      "billing_cycle": "Billing Cycle",
+      "next_payment": "Next Payment",
+      "payment_method": "Payment Method",
+      "update_method": "Update Payment Method",
+      "cancel_subscription": "Cancel Subscription"
+    },
+    "invoices": {
+      "title": "Invoices",
+      "invoice_number": "Invoice #{{number}}",
+      "date": "Date",
+      "amount": "Amount",
+      "status": "Status",
+      "download": "Download",
+      "view": "View",
+      "no_invoices": "No invoices yet",
+      "status_paid": "Paid",
+      "status_pending": "Pending",
+      "status_failed": "Failed",
+      "status_refunded": "Refunded"
+    },
+    "transaction_history": {
+      "title": "Transaction History",
+      "type": "Type",
+      "description": "Description",
+      "amount": "Amount",
+      "date": "Date",
+      "status": "Status",
+      "no_transactions": "No transactions yet",
+      "types": {
+        "subscription": "Subscription",
+        "promotion": "Listing Promotion",
+        "refund": "Refund",
+        "credit": "Credit"
+      }
+    },
+    "subscription_management": {
+      "title": "Manage Subscription",
+      "current_plan": "Current Plan",
+      "next_billing": "Next billing date: {{date}}",
+      "auto_renewal": "Auto-renewal",
+      "turn_on": "Turn On",
+      "turn_off": "Turn Off",
+      "update_payment": "Update Payment Method",
+      "cancel_subscription": "Cancel Subscription",
+      "reactivate": "Reactivate Subscription",
+      "downgrade": "Downgrade Plan",
+      "upgrade": "Upgrade Plan"
+    },
+    "cancellation": {
+      "title": "Cancel Subscription",
+      "confirm_message": "Are you sure you want to cancel your subscription?",
+      "access_until": "You'll have access to premium features until {{date}}",
+      "lose_access": "After cancellation, you'll lose access to:",
+      "can_reactivate": "You can reactivate your subscription anytime before {{date}}",
+      "confirm_cancel": "Yes, Cancel Subscription",
+      "keep_subscription": "Keep Subscription",
+      "cancelling": "Cancelling...",
+      "cancelled": "Subscription cancelled successfully",
+      "feedback": "Tell us why you're cancelling (optional)",
+      "feedback_placeholder": "Your feedback helps us improve our service..."
+    },
+    "upgrade": {
+      "title": "Upgrade Plan",
+      "compare_plans": "Compare Plans",
+      "current": "Current",
+      "recommended": "Recommended",
+      "choose_plan": "Choose {{plan}}",
+      "upgrade_now": "Upgrade Now",
+      "prorate_info": "You'll be charged a prorated amount for the remaining time in your billing cycle",
+      "immediate_access": "Get immediate access to all premium features"
+    },
+    "payment_status": {
+      "success": "Payment Successful",
+      "failed": "Payment Failed",
+      "pending": "Payment Pending",
+      "processing": "Processing Payment",
+      "cancelled": "Payment Cancelled",
+      "refunded": "Payment Refunded"
+    },
+    "errors": {
+      "payment_failed": "Payment failed. Please try again or use a different payment method",
+      "card_declined": "Your card was declined. Please check your card details",
+      "insufficient_funds": "Insufficient funds"
+    }
+  },
+
+  "admin": {
+    "navigation": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "listings": "Listings",
+      "categories": "Categories",
+      "reports": "Reports",
+      "analytics": "Analytics",
+      "payments": "Payments",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "overview": "Overview",
+      "stats": {
+        "total_users": "Total Users",
+        "active_users": "Active Users",
+        "new_users_today": "New Users Today",
+        "total_listings": "Total Listings",
+        "active_listings": "Active Listings",
+        "sold_listings": "Sold Listings",
+        "total_revenue": "Total Revenue",
+        "monthly_revenue": "Monthly Revenue",
+        "pending_reports": "Pending Reports",
+        "growth": "Growth",
+        "vs_last_month": "vs last month",
+        "from_last_month": "from last month",
+        "from_total_reports": "from total reports"
+      },
+      "charts": {
+        "user_growth": "User Growth",
+        "listing_activity": "Listing Activity",
+        "revenue_trend": "Revenue Trend",
+        "category_distribution": "Category Distribution"
+      },
+      "recent_activity": {
+        "title": "Recent Activity",
+        "new_user": "New user registered",
+        "new_listing": "New listing created",
+        "listing_sold": "Listing marked as sold",
+        "report_submitted": "Report submitted",
+        "payment_received": "Payment received",
+        "view_all": "View All Activity"
+      },
+      "quick_actions": {
+        "title": "Quick Actions",
+        "create_category": "Create Category",
+        "review_reports": "Review Reports",
+        "manage_users": "Manage Users",
+        "view_analytics": "View Analytics"
+      }
+    }
+  },
+
+  "validation": {
+    "required": "This field is required",
+    "email": {
+      "invalid": "Please enter a valid email address",
+      "required": "Email address is required"
+    },
+    "password": {
+      "required": "Password is required",
+      "min_length": "Password must be at least {{min}} characters",
+      "max_length": "Password must be no more than {{max}} characters",
+      "strength": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
+      "match": "Passwords do not match",
+      "current_required": "Current password is required",
+      "new_required": "New password is required"
+    },
+    "name": {
+      "required": "Name is required",
+      "min_length": "Name must be at least {{min}} characters",
+      "max_length": "Name must be no more than {{max}} characters",
+      "invalid_characters": "Name can only contain letters and spaces"
+    },
+    "phone": {
+      "invalid": "Please enter a valid phone number",
+      "required": "Phone number is required"
+    },
+    "title": {
+      "required": "Title is required",
+      "min_length": "Title must be at least {{min}} characters",
+      "max_length": "Title must be no more than {{max}} characters"
+    },
+    "description": {
+      "required": "Description is required",
+      "min_length": "Description must be at least {{min}} characters",
+      "max_length": "Description must be no more than {{max}} characters"
+    },
+    "price": {
+      "required": "Price is required",
+      "positive": "Price must be greater than 0",
+      "max_value": "Price cannot exceed {{max}}",
+      "invalid": "Please enter a valid price"
+    },
+    "category": {
+      "required": "Please select a category",
+      "invalid": "Invalid category selected"
+    },
+    "condition": {
+      "required": "Please select item condition",
+      "invalid": "Invalid condition selected"
+    },
+    "location": {
+      "required": "Location is required",
+      "address_required": "Street address is required",
+      "city_required": "City is required",
+      "state_required": "State is required",
+      "country_required": "Country is required",
+      "coordinates_required": "Location coordinates are required"
+    },
+    "images": {
+      "required": "At least one image is required",
+      "max_count": "Maximum {{max}} images allowed",
+      "invalid_format": "Invalid image format. Please use JPG, PNG, or WebP",
+      "file_too_large": "Image size too large. Maximum size is {{max}}MB",
+      "upload_failed": "Failed to upload image. Please try again"
+    }
+  },
+
   "labels": {
     "email": "Email",
     "password": "Password",
@@ -661,6 +919,7 @@
     "shipping": "Shipping",
     "discount": "Discount"
   },
+
   "placeholders": {
     "search": "Search for items...",
     "email": "Enter your email",
@@ -679,6 +938,7 @@
     "choose_file": "Choose file",
     "no_file_chosen": "No file chosen"
   },
+
   "messages": {
     "no_results": "No results found",
     "empty_state": "Nothing here yet",
@@ -692,1240 +952,89 @@
     "try_again": "Please try again",
     "contact_support": "Contact support if the problem persists",
     "loading_content": "Loading content...",
-    "no_items": "No items available",
-    "no_messages": "No messages yet",
-    "no_notifications": "No notifications",
-    "no_favorites": "No favorites yet",
-    "no_listings": "No listings found",
-    "saved_successfully": "Saved successfully",
-    "deleted_successfully": "Deleted successfully",
-    "updated_successfully": "Updated successfully",
-    "operation_completed": "Operation completed successfully"
-  },
-  "time": {
-    "just_now": "Just now",
-    "minutes_ago": "{{count}} minutes ago",
-    "hours_ago": "{{count}} hours ago",
-    "days_ago": "{{count}} days ago",
-    "weeks_ago": "{{count}} weeks ago",
-    "months_ago": "{{count}} months ago",
-    "years_ago": "{{count}} years ago",
-    "today": "Today",
-    "yesterday": "Yesterday",
-    "tomorrow": "Tomorrow",
-    "this_week": "This week",
-    "last_week": "Last week",
-    "this_month": "This month",
-    "last_month": "Last month",
-    "this_year": "This year",
-    "last_year": "Last year"
-  },
-  "pagination": {
-    "page": "Page",
-    "of": "of",
-    "showing": "Showing",
-    "to": "to",
-    "results": "results",
-    "items": "items",
-    "per_page": "per page",
-    "first": "First",
-    "last": "Last",
-    "no_data": "No data to display"
-  },
-  "confirmation": {
-    "are_you_sure": "Are you sure?",
-    "cannot_be_undone": "This action cannot be undone",
-    "confirm_delete": "Are you sure you want to delete this item?",
-    "confirm_logout": "Are you sure you want to log out?",
-    "unsaved_changes": "You have unsaved changes. Are you sure you want to leave?",
-    "yes": "Yes",
-    "no": "No",
-    "ok": "OK"
-  },
-  "accessibility": {
-    "menu": "Menu",
-    "close_menu": "Close menu",
-    "open_menu": "Open menu",
-    "toggle_menu": "Toggle menu",
-    "skip_to_content": "Skip to content",
-    "go_to_top": "Go to top",
-    "previous_page": "Previous page",
-    "next_page": "Next page",
-    "loading_content": "Loading content",
-    "search_button": "Search button",
-    "user_menu": "User menu",
-    "notifications": "Notifications",
-    "profile_picture": "Profile picture",
-    "logo": "Logo"
-  },
-  "theme": {
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System",
-    "theme": "Theme",
-    "appearance": "Appearance"
-  },
-  "language": {
-    "english": "English",
-    "indonesian": "Indonesian",
-    "language": "Language",
-    "change_language": "Change language"
-  },
-  "currency": {
-    "usd": "USD ($)",
-    "idr": "IDR (Rp)",
-    "currency": "Currency",
-    "change_currency": "Change currency"
-  },
-  "create": {
-    "title": "Create New Listing",
-    "subtitle": "Sell your item by creating a detailed listing",
-    "form": {
-      "title": "Title",
-      "title_placeholder": "What are you selling?",
-      "description": "Description",
-      "description_placeholder": "Describe your item in detail...",
-      "category": "Category",
-      "category_placeholder": "Select a category",
-      "price": "Price",
-      "price_placeholder": "Enter price",
-      "currency": "Currency",
-      "negotiable": "Price is negotiable",
-      "condition": "Condition",
-      "condition_new": "New",
-      "condition_like_new": "Like New",
-      "condition_good": "Good",
-      "condition_fair": "Fair",
-      "condition_poor": "Poor",
-      "images": "Images",
-      "images_subtitle": "Add photos of your item (max 10)",
-      "drag_drop": "Drag and drop images here or click to browse",
-      "location": "Location",
-      "address": "Street address",
-      "city": "City",
-      "state": "State",
-      "country": "Country",
-      "use_current_location": "Use current location",
-      "seo": "SEO Settings (Optional)",
-      "meta_title": "Meta title",
-      "meta_description": "Meta description",
-      "submit": "Create Listing",
-      "draft": "Save as Draft",
-      "creating": "Creating listing..."
-    },
-    "success": "Listing created successfully!",
-    "view_listing": "View your listing"
-  },
-  "edit": {
-    "title": "Edit Listing",
-    "subtitle": "Update your listing details",
-    "save": "Save Changes",
-    "saving": "Saving changes...",
-    "success": "Listing updated successfully!"
-  },
-  "detail": {
-    "share": "Share",
-    "favorite": "Add to Favorites",
-    "unfavorite": "Remove from Favorites",
-    "report": "Report this listing",
-    "contact_seller": "Contact Seller",
-    "phone_seller": "Call Seller",
-    "view_seller": "View Seller Profile",
-    "price_negotiable": "Negotiable",
-    "condition": "Condition",
-    "location": "Location",
-    "posted": "Posted",
-    "expires": "Expires",
-    "views": "{{count}} views",
-    "favorites": "{{count}} favorites",
-    "listing_id": "Listing ID",
-    "seller_info": "Seller Information",
-    "member_since": "Member since",
-    "seller_rating": "Seller rating",
-    "total_listings": "Total listings",
-    "similar_listings": "Similar listings",
-    "safety_tips": "Safety Tips",
-    "meet_public": "Meet in a public place",
-    "verify_item": "Verify the item before payment",
-    "trust_instincts": "Trust your instincts",
-    "promoted": "Promoted",
-    "featured": "Featured",
-    "urgent": "Urgent",
-    "highlight": "Highlighted",
-    "verified_seller": "Verified Seller"
-  },
-  "browse": {
-    "title": "Browse Listings",
-    "all_categories": "All Categories",
-    "filter": "Filter",
-    "sort": "Sort by",
-    "sort_relevance": "Relevance",
-    "sort_date_new": "Newest first",
-    "sort_date_old": "Oldest first",
-    "sort_price_low": "Price: Low to High",
-    "sort_price_high": "Price: High to Low",
-    "sort_distance": "Distance",
-    "filters": {
-      "category": "Category",
-      "price_range": "Price Range",
-      "location": "Location",
-      "condition": "Condition",
-      "distance": "Distance",
-      "posted_date": "Posted Date",
-      "seller_type": "Seller Type",
-      "features": "Features",
-      "clear_all": "Clear All Filters",
-      "apply_filters": "Apply Filters",
-      "min_price": "Min Price",
-      "max_price": "Max Price",
-      "within_radius": "Within {{radius}} km",
-      "any_condition": "Any Condition",
-      "today": "Today",
-      "this_week": "This Week",
-      "this_month": "This Month",
-      "promoted_only": "Promoted only",
-      "verified_only": "Verified sellers only"
-    },
-    "results": "{{count}} results found",
-    "no_results": "No listings found",
-    "no_results_message": "Try adjusting your search criteria or browse categories",
-    "load_more": "Load More Listings",
-    "end_of_results": "You've reached the end of results"
-  },
-  "search": {
-    "placeholder": "Search for items...",
-    "advanced": "Advanced Search",
-    "suggestions": "Suggestions",
-    "recent_searches": "Recent Searches",
-    "popular_searches": "Popular Searches",
-    "clear_search": "Clear search",
-    "search_in": "Search in {{category}}",
-    "results_for": "Results for \"{{query}}\"",
-    "no_suggestions": "No suggestions available"
-  },
-  "card": {
-    "price_on_request": "Price on request",
-    "contact_for_price": "Contact for price",
-    "free": "Free",
-    "swap": "Swap/Trade",
-    "more_details": "More Details",
-    "quick_view": "Quick View"
-  },
-  "status": {
-    "active": "Active",
-    "sold": "Sold",
-    "expired": "Expired",
-    "draft": "Draft",
-    "pending": "Pending Review",
-    "suspended": "Suspended",
-    "rejected": "Rejected"
-  },
-  "actions": {
-    "promote": "Promote Listing",
-    "renew": "Renew Listing",
-    "mark_sold": "Mark as Sold",
-    "delete": "Delete Listing",
-    "duplicate": "Duplicate Listing",
-    "print": "Print Listing",
-    "export": "Export Details"
-  },
-  "promote": {
-    "title": "Promote Your Listing",
-    "subtitle": "Get more visibility for your listing",
-    "featured": {
-      "name": "Featured",
-      "description": "Appear at the top of search results",
-      "duration": "7 days",
-      "price": "$5.00"
-    },
-    "urgent": {
-      "name": "Urgent",
-      "description": "Show urgent badge to attract attention",
-      "duration": "3 days",
-      "price": "$3.00"
-    },
-    "highlight": {
-      "name": "Highlight",
-      "description": "Highlight your listing with color",
-      "duration": "7 days",
-      "price": "$2.00"
-    },
-    "benefits": "Benefits",
-    "more_views": "Get more views",
-    "faster_sale": "Sell faster",
-    "top_results": "Appear in top results",
-    "select_package": "Select Package",
-    "proceed_payment": "Proceed to Payment",
-    "already_promoted": "This listing is already promoted"
-  },
-  "report": {
-    "title": "Report Listing",
-    "subtitle": "Help us keep the marketplace safe",
-    "reason": "Reason for reporting",
-    "spam": "Spam or fake listing",
-    "inappropriate": "Inappropriate content",
-    "fraud": "Fraudulent or scam",
-    "duplicate": "Duplicate listing",
-    "other": "Other",
-    "description": "Additional details (optional)",
-    "description_placeholder": "Provide more details about why you're reporting this listing...",
-    "submit": "Submit Report",
-    "submitting": "Submitting report...",
-    "success": "Report submitted successfully",
-    "success_message": "Thank you for helping us maintain a safe marketplace. We'll review your report.",
-    "already_reported": "You have already reported this listing"
-  },
-  "categories": {
-    "electronics": "Electronics",
-    "vehicles": "Vehicles",
-    "home_garden": "Home & Garden",
-    "fashion_beauty": "Fashion & Beauty",
-    "sports_recreation": "Sports & Recreation",
-    "books_media": "Books & Media",
-    "services": "Services",
-    "jobs": "Jobs",
-    "real_estate": "Real Estate",
-    "pets_animals": "Pets & Animals",
-    "mobile_phones": "Mobile Phones",
-    "computers_laptops": "Computers & Laptops",
-    "tablets": "Tablets",
-    "audio_headphones": "Audio & Headphones",
-    "gaming": "Gaming",
-    "cars": "Cars",
-    "motorcycles": "Motorcycles",
-    "trucks_commercial": "Trucks & Commercial",
-    "spare_parts": "Spare Parts",
-    "furniture": "Furniture",
-    "appliances": "Appliances",
-    "garden_outdoor": "Garden & Outdoor",
-    "home_decor": "Home Decor"
-  },
-  "validation": {
-    "title_required": "Title is required",
-    "title_length": "Title must be between 5 and 100 characters",
-    "description_required": "Description is required",
-    "description_length": "Description must be between 20 and 2000 characters",
-    "category_required": "Please select a category",
-    "price_required": "Price is required",
-    "price_positive": "Price must be a positive number",
-    "condition_required": "Please select item condition",
-    "images_required": "At least one image is required",
-    "images_max": "Maximum 10 images allowed",
-    "location_required": "Location is required",
-    "address_required": "Address is required",
-    "city_required": "City is required",
-    "invalid_image": "Invalid image format",
-    "image_too_large": "Image size too large (max 5MB)"
-  },
-  "limits": {
-    "free_limit": "Free users can create up to 5 listings",
-    "basic_limit": "Basic plan allows up to 50 listings",
-    "premium_limit": "Premium plan allows up to 200 listings",
-    "upgrade_required": "Upgrade your plan to create more listings",
-    "limit_reached": "You have reached your listing limit"
-  },
-  "title": "Messages",
-  "conversations": "Conversations",
-  "new_message": "New Message",
-  "search_conversations": "Search conversations...",
-  "no_conversations": "No conversations yet",
-  "start_messaging": "Contact a seller to start messaging",
-  "conversation_with": "Conversation with {{name}}",
-  "about_listing": "About: {{title}}",
-  "compose": {
-    "title": "New Message",
-    "to": "To",
-    "select_recipient": "Select recipient",
-    "subject": "Subject",
-    "message": "Message",
-    "send": "Send Message",
-    "sending": "Sending...",
-    "cancel": "Cancel",
-    "attach_file": "Attach File",
-    "emoji": "Add Emoji"
-  },
-  "chat": {
-    "type_message": "Type a message...",
-    "send": "Send",
-    "sending": "Sending...",
-    "message_sent": "Message sent",
-    "message_failed": "Failed to send message",
-    "retry": "Retry",
-    "online": "Online",
-    "offline": "Offline",
-    "typing": "{{name}} is typing...",
-    "last_seen": "Last seen {{time}}",
-    "mark_as_read": "Mark as read",
-    "mark_as_unread": "Mark as unread",
-    "delete_message": "Delete message",
-    "edit_message": "Edit message",
-    "copy_message": "Copy message",
-    "reply": "Reply",
-    "forward": "Forward",
-    "quote": "Quote"
-  },
-  "status": {
-    "sent": "Sent",
-    "delivered": "Delivered",
-    "read": "Read",
-    "failed": "Failed"
-  },
-  "actions": {
-    "archive": "Archive",
-    "unarchive": "Unarchive",
-    "delete": "Delete Conversation",
-    "block": "Block User",
-    "unblock": "Unblock User",
-    "report": "Report User",
-    "mute": "Mute Notifications",
-    "unmute": "Unmute Notifications",
-    "star": "Star Conversation",
-    "unstar": "Unstar Conversation"
-  },
-  "filters": {
-    "all": "All",
-    "unread": "Unread",
-    "archived": "Archived",
-    "starred": "Starred",
-    "blocked": "Blocked"
-  },
-  "notifications": {
-    "new_message": "New message from {{name}}",
-    "message_from": "Message from {{name}}: {{preview}}",
-    "multiple_messages": "{{count}} new messages",
-    "muted": "Conversation muted",
-    "unmuted": "Conversation unmuted"
-  },
-  "contact_seller": {
-    "title": "Contact Seller",
-    "about_item": "About: {{title}}",
-    "seller_info": "Seller: {{name}}",
-    "quick_messages": "Quick Messages",
-    "is_available": "Is this item still available?",
-    "more_info": "Can you provide more information?",
-    "negotiate_price": "Would you consider {{price}}?",
-    "meet_location": "Where can we meet?",
-    "payment_method": "What payment methods do you accept?",
-    "custom_message": "Write your own message",
-    "send": "Send Message",
-    "sending": "Sending...",
-    "sent": "Message sent successfully!"
-  },
-  "conversation_info": {
-    "title": "Conversation Info",
-    "participants": "Participants",
-    "created": "Created",
-    "messages": "Messages",
-    "shared_media": "Shared Media",
-    "listing_info": "Listing Information",
-    "seller_rating": "Seller Rating",
-    "view_profile": "View Profile",
-    "view_listing": "View Listing"
-  },
-  "attachment": {
-    "image": "Image",
-    "file": "File",
-    "location": "Location",
-    "contact": "Contact",
-    "upload_failed": "Upload failed",
-    "file_too_large": "File too large",
-    "unsupported_type": "Unsupported file type"
-  },
-  "safety": {
-    "title": "Safety Tips",
-    "meet_public": "Meet in a public place",
-    "bring_friend": "Bring a friend if possible",
-    "trust_instincts": "Trust your instincts",
-    "verify_identity": "Verify the seller's identity",
-    "inspect_item": "Inspect the item before payment",
-    "use_secure_payment": "Use secure payment methods",
-    "report_suspicious": "Report suspicious behavior"
-  },
-  "errors": {
-    "failed_to_load": "Failed to load messages",
-    "failed_to_send": "Failed to send message",
-    "connection_lost": "Connection lost",
-    "user_blocked": "This user has been blocked",
-    "conversation_not_found": "Conversation not found",
-    "message_too_long": "Message is too long",
-    "attachment_failed": "Failed to attach file",
-    "rate_limited": "You're sending messages too quickly"
-  },
-  "settings": {
-    "title": "Message Settings",
-    "notifications": "Notifications",
-    "email_notifications": "Email notifications for messages",
-    "push_notifications": "Push notifications for messages",
-    "sound_notifications": "Sound notifications",
-    "message_preview": "Show message preview",
-    "read_receipts": "Send read receipts",
-    "typing_indicators": "Show typing indicators",
-    "auto_archive": "Auto-archive old conversations",
-    "blocked_users": "Blocked Users",
-    "privacy": "Privacy Settings",
-    "who_can_message": "Who can message me",
-    "anyone": "Anyone",
-    "verified_users": "Verified users only",
-    "no_one": "No one"
-  },
-  "empty_states": {
-    "no_messages": "No messages in this conversation",
-    "start_conversation": "Send a message to start the conversation",
-    "no_results": "No conversations found",
-    "all_caught_up": "You're all caught up!",
-    "archived_empty": "No archived conversations",
-    "blocked_empty": "No blocked users"
-  },
-   "title": "Payments",
-  "billing": "Billing",
-  "subscription": "Subscription",
-  "current_plan": {
-    "title": "Current Plan",
-    "free": "Free Plan",
-    "basic": "Basic Plan",
-    "premium": "Premium Plan",
-    "expires_on": "Expires on {{date}}",
-    "renews_on": "Renews on {{date}}",
-    "cancelled": "Cancelled - Access until {{date}}",
-    "upgrade": "Upgrade Plan",
-    "change_plan": "Change Plan",
-    "cancel_subscription": "Cancel Subscription",
-    "renew_subscription": "Renew Subscription"
-  },
-  "plans": {
-    "free": {
-      "name": "Free",
-      "price": "Free",
-      "description": "Perfect for occasional sellers",
-      "features": {
-        "listings": "5 listings",
-        "images": "5 images per listing",
-        "duration": "30 days listing duration",
-        "support": "Community support"
-      }
-    },
-    "basic": {
-      "name": "Basic",
-      "price": "$9.99/month",
-      "yearly_price": "$99.99/year",
-      "yearly_savings": "Save 17%",
-      "description": "Great for regular sellers",
-      "features": {
-        "listings": "50 listings",
-        "images": "10 images per listing",
-        "promoted": "5 promoted listings/month",
-        "analytics": "Basic analytics",
-        "support": "Email support"
-      }
-    },
-    "premium": {
-      "name": "Premium",
-      "price": "$19.99/month",
-      "yearly_price": "$199.99/year",
-      "yearly_savings": "Save 17%",
-      "description": "Best for power sellers",
-      "features": {
-        "listings": "200 listings",
-        "images": "20 images per listing",
-        "promoted": "20 promoted listings/month",
-        "analytics": "Advanced analytics",
-        "priority": "Priority listing placement",
-        "support": "Priority support",
-        "verified": "Verified seller badge"
-      },
-      "popular": "Most Popular"
-    }
-  },
-  "billing_cycle": {
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "one_time": "One-time"
-  },
-  "payment_methods": {
-    "title": "Payment Methods",
-    "add_method": "Add Payment Method",
-    "edit_method": "Edit Payment Method",
-    "remove_method": "Remove Payment Method",
-    "default_method": "Default",
-    "set_as_default": "Set as Default",
-    "card_ending": "Card ending in {{last4}}",
-    "expires": "Expires {{month}}/{{year}}",
-    "no_methods": "No payment methods added",
-    "add_first": "Add your first payment method to manage subscriptions"
-  },
-  "add_payment": {
-    "title": "Add Payment Method",
-    "card_number": "Card Number",
-    "expiry_date": "Expiry Date",
-    "cvc": "CVC",
-    "cardholder_name": "Cardholder Name",
-    "billing_address": "Billing Address",
-    "same_as_profile": "Same as profile address",
-    "address": "Address",
-    "city": "City",
-    "state": "State",
-    "zip": "ZIP Code",
-    "country": "Country",
-    "add_card": "Add Card",
-    "adding": "Adding card...",
-    "success": "Payment method added successfully"
-  },
-  "checkout": {
-    "title": "Checkout",
-    "order_summary": "Order Summary",
-    "plan_details": "Plan Details",
-    "billing_details": "Billing Details",
-    "payment_method": "Payment Method",
-    "change_method": "Change",
-    "subtotal": "Subtotal",
-    "tax": "Tax",
-    "discount": "Discount",
-    "total": "Total",
-    "complete_payment": "Complete Payment",
-    "processing": "Processing payment...",
-    "secure_payment": "Secure payment powered by Stripe",
-    "terms_agreement": "By completing this purchase, you agree to our Terms of Service"
-  },
-  "promotions": {
-    "title": "Promote Your Listing",
-    "subtitle": "Increase visibility and sell faster",
-    "featured": {
-      "name": "Featured",
-      "price": "$5.00",
-      "duration": "7 days",
-      "description": "Appear at the top of search results",
-      "benefits": [
-        "Top placement in search",
-        "Featured badge",
-        "3x more views"
-      ]
-    },
-    "urgent": {
-      "name": "Urgent",
-      "price": "$3.00",
-      "duration": "3 days",
-      "description": "Show urgent badge to attract attention",
-      "benefits": [
-        "Urgent badge display",
-        "Higher visibility",
-        "Faster responses"
-      ]
-    },
-    "highlight": {
-      "name": "Highlight",
-      "price": "$2.00",
-      "duration": "7 days",
-      "description": "Highlight your listing with color",
-      "benefits": [
-        "Colored background",
-        "Stand out in results",
-        "More attention"
-      ]
-    },
-    "select_package": "Select Package",
-    "promote_now": "Promote Now",
-    "already_promoted": "This listing is already promoted until {{date}}"
-  },
-  "invoices": {
-    "title": "Invoices",
-    "invoice_number": "Invoice #{{number}}",
-    "date": "Date",
-    "amount": "Amount",
-    "status": "Status",
-    "download": "Download",
-    "view": "View",
-    "no_invoices": "No invoices yet",
-    "status_paid": "Paid",
-    "status_pending": "Pending",
-    "status_failed": "Failed",
-    "status_refunded": "Refunded"
-  },
-  "transaction_history": {
-    "title": "Transaction History",
-    "type": "Type",
-    "description": "Description",
-    "amount": "Amount",
-    "date": "Date",
-    "status": "Status",
-    "no_transactions": "No transactions yet",
-    "types": {
-      "subscription": "Subscription",
-      "promotion": "Listing Promotion",
-      "refund": "Refund",
-      "credit": "Credit"
-    }
-  },
-  "subscription_management": {
-    "title": "Manage Subscription",
-    "current_plan": "Current Plan",
-    "next_billing": "Next billing date: {{date}}",
-    "auto_renewal": "Auto-renewal",
-    "turn_on": "Turn On",
-    "turn_off": "Turn Off",
-    "update_payment": "Update Payment Method",
-    "cancel_subscription": "Cancel Subscription",
-    "reactivate": "Reactivate Subscription",
-    "downgrade": "Downgrade Plan",
-    "upgrade": "Upgrade Plan"
-  },
-  "cancellation": {
-    "title": "Cancel Subscription",
-    "confirm_message": "Are you sure you want to cancel your subscription?",
-    "access_until": "You'll have access to premium features until {{date}}",
-    "lose_access": "After cancellation, you'll lose access to:",
-    "can_reactivate": "You can reactivate your subscription anytime before {{date}}",
-    "confirm_cancel": "Yes, Cancel Subscription",
-    "keep_subscription": "Keep Subscription",
-    "cancelling": "Cancelling...",
-    "cancelled": "Subscription cancelled successfully",
-    "feedback": "Tell us why you're cancelling (optional)",
-    "feedback_placeholder": "Your feedback helps us improve our service..."
-  },
-  "upgrade": {
-    "title": "Upgrade Plan",
-    "compare_plans": "Compare Plans",
-    "current": "Current",
-    "recommended": "Recommended",
-    "choose_plan": "Choose {{plan}}",
-    "upgrade_now": "Upgrade Now",
-    "prorate_info": "You'll be charged a prorated amount for the remaining time in your billing cycle",
-    "immediate_access": "Get immediate access to all premium features"
-  },
-  "payment_status": {
-    "success": "Payment Successful",
-    "failed": "Payment Failed",
-    "pending": "Payment Pending",
-    "processing": "Processing Payment",
-    "cancelled": "Payment Cancelled",
-    "refunded": "Payment Refunded"
-  },
-  "errors": {
-    "payment_failed": "Payment failed. Please try again or use a different payment method",
-    "card_declined": "Your card was declined. Please check your card details",
-    "insufficient_funds": "Insufficient funds. Please check your account balance",
-    "expired_card": "Your card has expired. Please update your payment method",
-    "network_error": "Network error. Please check your connection and try again",
-    "invalid_amount": "Invalid payment amount",
-    "subscription_error": "Subscription error. Please contact support",
-    "refund_failed": "Refund failed. Please contact support",
-    "already_subscribed": "You already have an active subscription"
-  },
-  "refunds": {
-    "title": "Request Refund",
-    "reason": "Reason for refund",
-    "reason_placeholder": "Please explain why you're requesting a refund...",
-    "submit_request": "Submit Refund Request",
-    "processing_time": "Refund requests are typically processed within 5-7 business days",
-    "refund_policy": "View Refund Policy",
-    "success": "Refund request submitted successfully",
-    "status": {
-      "requested": "Refund Requested",
-      "processing": "Processing Refund",
-      "approved": "Refund Approved",
-      "completed": "Refund Completed",
-      "denied": "Refund Denied"
-    }
-  },
-    "navigation": {
-    "overview": "Overview",
-    "listings": "My Listings",
-    "favorites": "Favorites",
-    "messages": "Messages",
-    "settings": "Settings",
-    "subscription": "Subscription",
-    "billing": "Billing",
-    "help": "Help & Support"
-  },
-  "overview": {
-    "title": "Profile Overview",
-    "welcome": "Welcome back, {{name}}!",
-    "member_since": "Member since {{date}}",
-    "stats": {
-      "total_listings": "Total Listings",
-      "active_listings": "Active Listings",
-      "sold_items": "Sold Items",
-      "total_views": "Total Views",
-      "rating": "Rating",
-      "reviews": "Reviews"
-    },
-    "quick_actions": {
-      "title": "Quick Actions",
-      "create_listing": "Create New Listing",
-      "manage_listings": "Manage Listings",
-      "view_messages": "View Messages",
-      "update_profile": "Update Profile"
-    },
-    "recent_activity": {
-      "title": "Recent Activity",
-      "no_activity": "No recent activity"
-    }
-  },
-  "edit": {
-    "title": "Edit Profile",
-    "personal_info": "Personal Information",
-    "contact_info": "Contact Information",
-    "location_info": "Location Information",
-    "preferences": "Preferences",
-    "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "avatar": "Profile Picture",
-      "change_avatar": "Change Picture",
-      "upload_avatar": "Upload New Picture",
-      "remove_avatar": "Remove Picture",
-      "address": "Street Address",
-      "city": "City",
-      "state": "State/Province",
-      "country": "Country",
-      "language": "Language",
-      "currency": "Currency",
-      "theme": "Theme",
-      "notifications": "Notification Preferences",
-      "email_notifications": "Email Notifications",
-      "push_notifications": "Push Notifications",
-      "sms_notifications": "SMS Notifications"
-    },
-    "save": "Save Changes",
-    "saving": "Saving...",
-    "success": "Profile updated successfully!",
-    "cancel": "Cancel Changes"
-  },
-  "listings": {
-    "title": "My Listings",
-    "create_new": "Create New Listing",
-    "filter_by": "Filter by",
-    "all_status": "All Status",
-    "active": "Active",
-    "draft": "Draft",
-    "sold": "Sold",
-    "expired": "Expired",
-    "suspended": "Suspended",
-    "no_listings": "You haven't created any listings yet",
-    "create_first": "Create your first listing to start selling",
-    "actions": {
-      "edit": "Edit",
-      "promote": "Promote",
-      "renew": "Renew",
-      "mark_sold": "Mark as Sold",
-      "delete": "Delete",
-      "view": "View",
-      "duplicate": "Duplicate"
-    },
-    "stats": {
-      "views": "Views",
-      "favorites": "Favorites",
-      "messages": "Messages",
-      "expires_in": "Expires in {{days}} days"
-    },
-    "bulk_actions": {
-      "select_all": "Select All",
-      "delete_selected": "Delete Selected",
-      "mark_sold": "Mark as Sold",
-      "renew_selected": "Renew Selected"
-    }
-  },
-  "favorites": {
-    "title": "My Favorites",
-    "subtitle": "Items you've saved for later",
-    "no_favorites": "You haven't added any favorites yet",
-    "browse_items": "Browse items to add to your favorites",
-    "remove": "Remove from Favorites",
-    "remove_confirm": "Remove this item from your favorites?",
-    "contact_seller": "Contact Seller",
-    "view_item": "View Item",
-    "sort_by": "Sort by",
-    "date_added": "Date Added",
-    "price_low": "Price: Low to High",
-    "price_high": "Price: High to Low",
-    "clear_all": "Clear All Favorites",
-    "clear_confirm": "Are you sure you want to remove all favorites?"
-  },
-  "messages": {
-    "title": "Messages",
-    "no_conversations": "No conversations yet",
-    "start_conversation": "Contact a seller to start a conversation",
-    "search_conversations": "Search conversations",
-    "all": "All",
-    "unread": "Unread",
-    "archived": "Archived",
-    "mark_read": "Mark as Read",
-    "mark_unread": "Mark as Unread",
-    "archive": "Archive",
-    "delete": "Delete Conversation",
-    "block_user": "Block User",
-    "report_user": "Report User",
-    "conversation_with": "Conversation with {{name}}",
-    "about_listing": "About: {{title}}",
-    "type_message": "Type a message...",
-    "send": "Send",
-    "sending": "Sending...",
-    "online": "Online",
-    "last_seen": "Last seen {{time}}",
-    "typing": "{{name}} is typing...",
-    "message_deleted": "This message was deleted",
-    "conversation_archived": "Conversation archived",
-    "user_blocked": "User blocked"
-  },
-  "settings": {
-    "title": "Account Settings",
-    "sections": {
-      "account": "Account",
-      "privacy": "Privacy",
-      "notifications": "Notifications",
-      "security": "Security",
-      "preferences": "Preferences"
-    },
-    "account": {
-      "email_verification": "Email Verification",
-      "verified": "Verified",
-      "not_verified": "Not Verified",
-      "verify_now": "Verify Now",
-      "resend_verification": "Resend Verification",
-      "phone_verification": "Phone Verification",
-      "change_password": "Change Password",
-      "delete_account": "Delete Account"
-    },
-    "privacy": {
-      "profile_visibility": "Profile Visibility",
-      "public": "Public",
-      "private": "Private",
-      "show_phone": "Show phone number in listings",
-      "show_email": "Show email address to buyers",
-      "search_engines": "Allow search engines to index my profile"
-    },
-    "notifications": {
-      "email": "Email Notifications",
-      "push": "Push Notifications",
-      "sms": "SMS Notifications",
-      "new_messages": "New messages",
-      "listing_updates": "Listing updates",
-      "price_drops": "Price drops on favorites",
-      "promotional": "Promotional emails",
-      "newsletter": "Newsletter",
-      "security_alerts": "Security alerts"
-    },
-    "security": {
-      "two_factor": "Two-Factor Authentication",
-      "enabled": "Enabled",
-      "disabled": "Disabled",
-      "enable": "Enable",
-      "disable": "Disable",
-      "login_history": "Login History",
-      "active_sessions": "Active Sessions",
-      "trusted_devices": "Trusted Devices"
-    },
-    "preferences": {
-      "language": "Language",
-      "currency": "Currency",
-      "theme": "Theme",
-      "timezone": "Timezone",
-      "date_format": "Date Format",
-      "distance_unit": "Distance Unit",
-      "kilometers": "Kilometers",
-      "miles": "Miles"
-    }
-  },
-  "subscription": {
-    "title": "Subscription",
-    "current_plan": "Current Plan",
-    "free_plan": "Free Plan",
-    "basic_plan": "Basic Plan",
-    "premium_plan": "Premium Plan",
-    "upgrade": "Upgrade Plan",
-    "downgrade": "Downgrade Plan",
-    "cancel": "Cancel Subscription",
-    "renew": "Renew Subscription",
-    "billing_cycle": "Billing Cycle",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "next_billing": "Next billing date",
-    "auto_renew": "Auto-renewal",
-    "on": "On",
-    "off": "Off",
-    "features": {
-      "max_listings": "Max listings",
-      "max_images": "Images per listing",
-      "promoted_listings": "Promoted listings per month",
-      "priority_support": "Priority support",
-      "analytics": "Advanced analytics",
-      "unlimited": "Unlimited"
-    },
-    "usage": {
-      "title": "Usage",
-      "listings_used": "Listings used",
-      "promotions_used": "Promotions used",
-      "resets_on": "Resets on {{date}}"
-    }
-  },
-  "billing": {
-    "title": "Billing",
-    "payment_method": "Payment Method",
-    "add_payment": "Add Payment Method",
-    "update_payment": "Update Payment Method",
-    "remove_payment": "Remove Payment Method",
-    "billing_address": "Billing Address",
-    "invoice_history": "Invoice History",
-    "download_invoice": "Download",
-    "no_invoices": "No invoices available",
-    "auto_pay": "Auto-pay",
-    "payment_failed": "Payment Failed",
-    "retry_payment": "Retry Payment",
-    "update_billing": "Update Billing Information"
-  },
-  "security": {
-    "change_password": {
-      "title": "Change Password",
-      "current_password": "Current Password",
-      "new_password": "New Password",
-      "confirm_password": "Confirm New Password",
-      "change": "Change Password",
-      "success": "Password changed successfully"
-    },
-    "delete_account": {
-      "title": "Delete Account",
-      "warning": "This action cannot be undone",
-      "description": "Deleting your account will permanently remove all your data including listings, messages, and profile information.",
-      "confirm_password": "Enter your password to confirm",
-      "confirm_text": "Type 'DELETE' to confirm",
-      "delete": "Delete My Account",
-      "cancelled": "Account deletion cancelled"
-    }
-  },
-  "verification": {
-    "email": {
-      "title": "Email Verification",
-      "description": "Verify your email address to secure your account",
-      "send": "Send Verification Email",
-      "resend": "Resend Email",
-      "check_email": "Check your email for the verification link",
-      "verified": "Your email has been verified!",
-      "failed": "Email verification failed"
-    },
-    "phone": {
-      "title": "Phone Verification",
-      "description": "Verify your phone number to enable SMS notifications",
-      "send_code": "Send Verification Code",
-      "enter_code": "Enter the code sent to your phone",
-      "code": "Verification Code",
-      "verify": "Verify Phone",
-      "verified": "Your phone has been verified!",
-      "failed": "Phone verification failed",
-      "invalid_code": "Invalid verification code"
-    }
-  },
-    "required": "This field is required",
-  "email": {
-    "invalid": "Please enter a valid email address",
-    "required": "Email address is required"
-  },
-  "password": {
-    "required": "Password is required",
-    "min_length": "Password must be at least {{min}} characters",
-    "max_length": "Password must be no more than {{max}} characters",
-    "strength": "Password must contain at least one uppercase letter, one lowercase letter, and one number",
-    "match": "Passwords do not match",
-    "current_required": "Current password is required",
-    "new_required": "New password is required"
-  },
-  "name": {
-    "required": "Name is required",
-    "min_length": "Name must be at least {{min}} characters",
-    "max_length": "Name must be no more than {{max}} characters",
-    "invalid_characters": "Name can only contain letters and spaces"
-  },
-  "phone": {
-    "invalid": "Please enter a valid phone number",
-    "required": "Phone number is required"
-  },
-  "title": {
-    "required": "Title is required",
-    "min_length": "Title must be at least {{min}} characters",
-    "max_length": "Title must be no more than {{max}} characters"
-  },
-  "description": {
-    "required": "Description is required",
-    "min_length": "Description must be at least {{min}} characters",
-    "max_length": "Description must be no more than {{max}} characters"
-  },
-  "price": {
-    "required": "Price is required",
-    "positive": "Price must be greater than 0",
-    "max_value": "Price cannot exceed {{max}}",
-    "invalid": "Please enter a valid price"
-  },
-  "category": {
-    "required": "Please select a category",
-    "invalid": "Invalid category selected"
-  },
-  "condition": {
-    "required": "Please select item condition",
-    "invalid": "Invalid condition selected"
-  },
-  "location": {
-    "required": "Location is required",
-    "address_required": "Street address is required",
-    "city_required": "City is required",
-    "state_required": "State is required",
-    "country_required": "Country is required",
-    "coordinates_required": "Location coordinates are required"
-  },
-  "images": {
-    "required": "At least one image is required",
-    "max_count": "Maximum {{max}} images allowed",
-    "invalid_format": "Invalid image format. Please use JPG, PNG, or WebP",
-    "file_too_large": "Image size too large. Maximum size is {{max}}MB",
-    "upload_failed": "Failed to upload image. Please try again"
-  },
-  "slug": {
-    "required": "Slug is required",
-    "invalid": "Slug can only contain lowercase letters, numbers, and hyphens",
-    "exists": "This slug already exists"
-  },
-  "terms": {
-    "required": "You must accept the terms and conditions"
-  },
-  "age": {
-    "min": "You must be at least {{min}} years old",
-    "required": "Age is required"
-  },
-  "url": {
-    "invalid": "Please enter a valid URL"
-  },
-  "date": {
-    "invalid": "Please enter a valid date",
-    "required": "Date is required",
-    "future": "Date must be in the future",
-    "past": "Date must be in the past"
-  },
-  "number": {
-    "invalid": "Please enter a valid number",
-    "min": "Number must be at least {{min}}",
-    "max": "Number cannot exceed {{max}}",
-    "integer": "Number must be a whole number"
-  },
-  "text": {
-    "min_length": "Text must be at least {{min}} characters",
-    "max_length": "Text must be no more than {{max}} characters",
-    "no_html": "HTML tags are not allowed",
-    "no_special_chars": "Special characters are not allowed"
-  },
-  "select": {
-    "required": "Please make a selection",
-    "invalid": "Invalid selection"
-  },
-  "checkbox": {
-    "required": "This checkbox must be checked"
-  },
-  "file": {
-    "required": "Please select a file",
-    "invalid_type": "Invalid file type",
-    "too_large": "File size too large. Maximum size is {{max}}MB",
-    "upload_failed": "File upload failed. Please try again"
-  },
-  "search": {
-    "min_length": "Search query must be at least {{min}} characters",
-    "no_results": "No results found for your search"
-  },
-  "message": {
-    "required": "Message is required",
-    "min_length": "Message must be at least {{min}} characters",
-    "max_length": "Message must be no more than {{max}} characters",
-    "no_spam": "Spam content detected. Please revise your message"
-  },
-  "rating": {
-    "required": "Rating is required",
-    "invalid": "Please select a valid rating"
-  },
-  "quantity": {
-    "required": "Quantity is required",
-    "min": "Quantity must be at least {{min}}",
-    "max": "Quantity cannot exceed {{max}}",
-    "integer": "Quantity must be a whole number"
-  },
-  "timezone": {
-    "invalid": "Invalid timezone selected"
-  },
-  "coordinates": {
-    "invalid": "Invalid coordinates",
-    "latitude_range": "Latitude must be between -90 and 90",
-    "longitude_range": "Longitude must be between -180 and 180"
-  },
-  "postal_code": {
-    "invalid": "Please enter a valid postal code"
-  },
-  "credit_card": {
-    "invalid": "Please enter a valid credit card number",
-    "expired": "Credit card has expired",
-    "cvc_invalid": "Please enter a valid CVC code"
-  },
-  "coupon": {
-    "invalid": "Invalid coupon code",
-    "expired": "Coupon has expired",
-    "not_applicable": "Coupon is not applicable to this item"
-  },
-  "username": {
-    "required": "Username is required",
-    "min_length": "Username must be at least {{min}} characters",
-    "max_length": "Username must be no more than {{max}} characters",
-    "invalid_characters": "Username can only contain letters, numbers, and underscores",
-    "exists": "Username already exists"
-  },
-  "social": {
-    "invalid_url": "Please enter a valid social media URL"
-  },
-  "brand": {
-    "required": "Brand is required",
-    "invalid": "Invalid brand selected"
-  },
-  "model": {
-    "required": "Model is required",
-    "max_length": "Model must be no more than {{max}} characters"
-  },
-  "year": {
-    "required": "Year is required",
-    "min": "Year must be {{min}} or later",
-    "max": "Year cannot be later than {{max}}"
-  },
-  "color": {
-    "required": "Color is required",
-    "invalid": "Invalid color selected"
-  },
-  "size": {
-    "required": "Size is required",
-    "invalid": "Invalid size selected"
-  },
-  "weight": {
-    "required": "Weight is required",
-    "positive": "Weight must be greater than 0",
-    "max": "Weight cannot exceed {{max}} kg"
-  },
-  "dimensions": {
-    "required": "Dimensions are required",
-    "positive": "Dimensions must be greater than 0"
-  },
-  "custom": {
-    "field_required": "{{field}} is required",
-    "field_invalid": "{{field}} is invalid",
-    "field_too_short": "{{field}} is too short",
-    "field_too_long": "{{field}} is too long"
-  },
-  "server": {
-    "network_error": "Network error. Please check your connection",
-    "server_error": "Server error. Please try again later",
-    "validation_failed": "Validation failed. Please check your input",
-    "unauthorized": "You are not authorized to perform this action",
-    "forbidden": "Access denied",
-    "not_found": "The requested resource was not found",
-    "conflict": "Conflict with existing data",
-    "rate_limit": "Too many requests. Please try again later"
-  },
-  "auth": {
-    "invalid_credentials": "Invalid email or password",
-    "account_locked": "Account temporarily locked due to failed login attempts",
-    "email_not_verified": "Please verify your email address before signing in",
-    "token_expired": "Token has expired. Please request a new one",
-    "token_invalid": "Invalid token",
-    "session_expired": "Your session has expired. Please sign in again"
-  }
+    "no_items": "No items to display",
+    "load_failed": "Failed to load content"
+  },
+
+  "common:site_name": "OLX Marketplace",
+  "common:tagline": "Buy and sell locally with ease",
+  "common:description": "Your trusted local marketplace for buying and selling items in your community",
+  "common:loading": "Loading...",
+  "common:saving": "Saving...",
+  "common:success": "Success!",
+  "common:error": "Error occurred",
+  "common:warning": "Warning",
+  "common:back": "Back",
+  "common:save": "Save",
+  "common:cancel": "Cancel",
+  "common:delete": "Delete",
+  "common:edit": "Edit",
+  "common:view": "View",
+
+  "navigation:home": "Home",
+  "navigation:browse": "Browse",
+  "navigation:sell": "Sell",
+  "navigation:create_listing": "Create Listing",
+  "navigation:messages": "Messages",
+  "navigation:favorites": "Favorites",
+  "navigation:profile": "Profile",
+  "navigation:my_listings": "My Listings",
+  "navigation:dashboard": "Dashboard",
+  "navigation:admin": "Admin",
+  "navigation:help": "Help",
+  "navigation:about": "About",
+  "navigation:contact": "Contact",
+  "navigation:settings": "Settings",
+  "navigation:sign_in": "Sign In",
+  "navigation:sign_out": "Sign Out",
+  "navigation:sign_up": "Sign Up",
+  "navigation:listings": "Listings",
+
+  "auth:signin_title": "Sign In",
+  "auth:signup_title": "Create Account",
+  "auth:fields_email": "Email Address",
+  "auth:fields_password": "Password",
+  "auth:fields_name": "Full Name",
+  "auth:placeholders_email": "Enter your email address",
+  "auth:placeholders_password": "Enter your password",
+  "auth:placeholders_name": "Enter your full name",
+  "auth:errors_signin_failed": "Sign in failed. Please check your credentials",
+  "auth:errors_generic": "An error occurred. Please try again",
+  "auth:errors_invalid_credentials": "Invalid email or password",
+
+  "listings:title": "Title",
+  "listings:description": "Description",
+  "listings:price": "Price",
+  "listings:category": "Category",
+  "listings:condition_label": "Condition",
+  "listings:condition_new": "New",
+  "listings:condition_like_new": "Like New",
+  "listings:condition_good": "Good",
+  "listings:condition_fair": "Fair",
+  "listings:condition_poor": "Poor",
+  "listings:create_listing": "Create Listing",
+  "listings:back": "Back",
+  "listings:clear_search": "Clear Search",
+
+  "profile:dashboard_title": "Profile Dashboard",
+  "profile:stats_total_listings": "Total Listings",
+  "profile:stats_active_listings": "Active Listings",
+
+  "messages:title": "Messages",
+  "messages:conversations": "Conversations",
+  "messages:new_message": "New Message",
+
+  "payment:subscription_plans_title": "Choose Your Plan",
+  "payment:billing_title": "Billing & Subscriptions",
+
+  "admin:dashboard_title": "Admin Dashboard",
+  "admin:navigation_dashboard": "Dashboard",
+  "admin:navigation_users": "Users",
+  "admin:navigation_listings": "Listings",
+
+  "validation:required": "This field is required",
+  "validation:email_invalid": "Please enter a valid email address",
+  "validation:password_required": "Password is required",
+
+  "LocaleSwitcher": "Language Switcher"
 }

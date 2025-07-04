@@ -1,1 +1,0 @@
-// Locale loading UI
